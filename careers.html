@@ -1,492 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers at myOnsite Healthcare | Join Our Team</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #1f2937; line-height: 1.6; }
-    a { color: #3b5fc0; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    
-    /* HEADER & NAV */
-    #navbar { background: linear-gradient(135deg, #0f1419, #1a202c); border-bottom: 1px solid #2d3748; position: sticky; top: 0; z-index: 100; }
-    .nav-inner { max-width: 1400px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 12px; color: white; font-weight: 700; font-size: 16px; }
-    .nav-logo span { color: #22d3ee; }
-    .nav-logo-icon { width: 28px; height: 28px; }
-    .nav-links { display: flex; gap: 28px; align-items: center; }
-    .nav-item { position: relative; }
-    .nav-link { background: none; border: none; color: #e5e7eb; font-size: 14px; cursor: pointer; font-weight: 500; }
-    .nav-link:hover { color: #22d3ee; }
-    .dropdown-menu { position: absolute; top: 100%; left: 0; background: #1a202c; border: 1px solid #2d3748; border-radius: 8px; padding: 12px; min-width: 200px; display: none; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
-    .nav-item:hover .dropdown-menu { display: flex; flex-direction: column; gap: 8px; }
-    .dropdown-link { color: #9ca3af; font-size: 13px; padding: 8px 12px; border-radius: 4px; }
-    .dropdown-link:hover { background: #2d3748; color: #22d3ee; }
-    .nav-cta { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 13px; }
-    .hamburger { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
-    .mobile-nav { display: none; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-      .mobile-nav { display: none; flex-direction: column; gap: 12px; padding: 16px; background: #1a202c; }
-      .mobile-nav.open { display: flex; }
-      .mobile-cta { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 12px 16px; border-radius: 6px; font-weight: 600; text-align: center; }
-    }
-    
-    /* HERO */
-    .hero { background: linear-gradient(135deg, #0f1419 0%, #1a3a52 50%, #2d1b69 100%); color: white; padding: 100px 24px; text-align: center; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -50%; left: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(34,211,238,0.15) 0%, transparent 70%); border-radius: 50%; }
-    .hero::after { content: ''; position: absolute; bottom: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(59,95,192,0.15) 0%, transparent 70%); border-radius: 50%; }
-    .hero-content { position: relative; z-index: 2; }
-    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
-    .hero-subtitle { font-size: 18px; color: #cbd5e1; margin-bottom: 0; }
-    @media (max-width: 768px) {
-      .hero { padding: 60px 20px; }
-      .hero h1 { font-size: 32px; }
-      .hero-subtitle { font-size: 16px; }
-    }
-    
-    /* SECTIONS */
-    .section { max-width: 1400px; margin: 0 auto; padding: 80px 24px; }
-    .section h2 { font-size: 36px; font-weight: 700; margin-bottom: 48px; text-align: center; color: #0f1419; }
-    
-    /* WHY WORK HERE */
-    .why-work { background: #f9fafb; }
-    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-    .why-card { background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; }
-    .why-icon { font-size: 48px; margin-bottom: 16px; }
-    .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #1f2937; }
-    .why-card p { color: #6b7280; font-size: 14px; line-height: 1.6; }
-    @media (max-width: 768px) {
-      .why-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    
-    /* OPEN POSITIONS */
-    .positions { background: white; }
-    .jobs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    .job-card { background: #f9fafb; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; }
-    .job-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px; }
-    .job-card h3 { font-size: 20px; font-weight: 700; color: #1f2937; margin-bottom: 8px; }
-    .job-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; font-size: 13px; }
-    .job-badge { background: linear-gradient(135deg, #22d3ee15, #3b5fc015); padding: 6px 12px; border-radius: 20px; border: 1px solid #22d3ee; color: #3b5fc0; font-weight: 600; }
-    .job-card p { color: #6b7280; margin-bottom: 16px; font-size: 14px; }
-    .job-requirements { background: white; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
-    .job-requirements h4 { font-size: 13px; font-weight: 700; color: #374151; margin-bottom: 12px; }
-    .job-requirements ul { list-style: none; padding-left: 0; }
-    .job-requirements li { padding: 6px 0; padding-left: 20px; position: relative; font-size: 13px; color: #6b7280; }
-    .job-requirements li::before { content: '•'; position: absolute; left: 8px; color: #3b5fc0; font-weight: bold; }
-    .job-apply { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 12px 24px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; }
-    .job-apply:hover { opacity: 0.9; }
-    @media (max-width: 768px) {
-      .jobs-grid { grid-template-columns: 1fr; }
-    }
-    
-    /* BENEFITS */
-    .benefits { background: linear-gradient(135deg, #f0f9ff, #f0fdf4); }
-    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
-    .benefit-item { background: white; padding: 24px; border-radius: 12px; border-left: 4px solid #3b5fc0; }
-    .benefit-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #1f2937; }
-    .benefit-item p { color: #6b7280; font-size: 13px; }
-    @media (max-width: 768px) {
-      .benefits-grid { grid-template-columns: 1fr; }
-    }
-    
-    /* EARNINGS CALCULATOR */
-    .calculator { background: white; }
-    .calc-card { background: linear-gradient(135deg, #f9fafb, #f3f4f6); padding: 48px; border-radius: 12px; max-width: 700px; margin: 0 auto; border: 1px solid #e5e7eb; }
-    .calc-header { text-align: center; margin-bottom: 32px; }
-    .calc-header h3 { font-size: 22px; font-weight: 700; color: #1f2937; margin-bottom: 8px; }
-    .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid #e5e7eb; }
-    .calc-row:last-child { border-bottom: none; background: linear-gradient(135deg, #22d3ee15, #3b5fc015); }
-    .calc-label { font-weight: 600; color: #374151; }
-    .calc-value { font-size: 18px; font-weight: 700; color: #3b5fc0; }
-    
-    /* TESTIMONIALS */
-    .testimonials { background: #f9fafb; }
-    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
-    .testimonial-card { background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; }
-    .testimonial-avatar { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; background: linear-gradient(135deg, #22d3ee, #3b5fc0); margin-bottom: 16px; }
-    .testimonial-name { font-weight: 700; color: #1f2937; margin-bottom: 4px; }
-    .testimonial-role { font-size: 13px; color: #6b7280; margin-bottom: 16px; }
-    .testimonial-quote { color: #4b5563; font-size: 14px; line-height: 1.8; font-style: italic; }
-    .testimonial-stars { margin-bottom: 16px; color: #fbbf24; }
-    @media (max-width: 768px) {
-      .testimonial-grid { grid-template-columns: 1fr; }
-    }
-    
-    /* APPLICATION FORM */
-    .application { background: linear-gradient(135deg, #22d3ee15, #3b5fc015); padding: 48px; border-radius: 12px; max-width: 700px; margin: 40px auto; border: 1px solid #e5e7eb; }
-    .application h3 { font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #1f2937; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #374151; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; font-size: 14px; }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-submit { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 12px 24px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; }
-    .form-submit:hover { opacity: 0.9; }
-    
-    /* REQUIREMENTS */
-    .requirements { background: white; }
-    .req-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
-    .req-card { background: linear-gradient(135deg, #fef3c7, #fecaca); padding: 32px; border-radius: 12px; }
-    .req-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: #b45309; }
-    .req-card ul { list-style: none; }
-    .req-card li { padding: 8px 0; padding-left: 20px; position: relative; font-size: 14px; color: #92400e; }
-    .req-card li::before { content: '✓'; position: absolute; left: 0; color: #b45309; font-weight: bold; }
-    @media (max-width: 768px) {
-      .req-grid { grid-template-columns: 1fr; }
-    }
-    
-    /* FOOTER */
-    .footer { background: #0f1419; color: #e5e7eb; padding: 60px 24px 20px; margin-top: 80px; }
-    .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 48px; margin-bottom: 40px; }
-    .footer-col h4 { color: white; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
-    .footer-col a { color: #9ca3af; font-size: 13px; display: block; margin-bottom: 10px; }
-    .footer-col a:hover { color: #22d3ee; }
-    .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 24px; border-top: 1px solid #2d3748; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
-    .footer-legal { display: flex; gap: 24px; }
-    .hipaa-badge { background: #10b981; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | myOnsite Healthcare – Join Our Mobile Health Team</title>
+<meta name="description" content="Join myOnsite Healthcare's growing team of mobile phlebotomists, clinical research coordinators, and healthcare professionals. Flexible schedules, competitive pay, meaningful work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+:root{--blue:#2CA5F3;--teal:#34CFD1;--yellow:#FFC100;--body:#232020;--bg:#F7F8FA;--grad:linear-gradient(90deg,#2CA5F3 0%,#34CFD1 100%)}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Nunito',sans-serif;color:var(--body);background:#fff}a{text-decoration:none;color:inherit}
+.top-bar{background:var(--grad);color:#fff;font-size:13px;padding:8px 0}
+.top-bar .inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.top-bar a{color:#fff;margin-left:16px}
+.site-nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:999}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo img{height:52px}
+.nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+.nav-links a{font-size:14px;font-weight:700;color:var(--body);padding:8px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--grad);color:#fff !important;border-radius:50px !important;padding:10px 22px !important}
+.hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer}
+@media(max-width:1024px){.nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:#fff;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.12)}.nav-links.open{display:flex}.hamburger{display:block}}
+.float-contact{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1000;background:var(--grad);color:#fff;writing-mode:vertical-rl;padding:18px 10px;font-size:13px;font-weight:700;border-radius:8px 0 0 8px;letter-spacing:1px}
+.page-hero{background:var(--grad);position:relative;overflow:hidden;padding:80px 20px 60px;text-align:center;color:#fff}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('https://myonsitehealthcare.com/wp-content/themes/Divi_Child/img/patten_dots.png') repeat;opacity:.12}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;position:relative;margin-bottom:16px}
+.page-hero p{font-size:18px;opacity:.92;max-width:600px;margin:0 auto;position:relative}
+.breadcrumb{position:relative;margin-top:20px;font-size:14px;opacity:.85}.breadcrumb a{color:#fff;font-weight:600}.breadcrumb span{margin:0 8px}
+.job-card{background:#fff;border:2px solid #e8eaed;border-radius:16px;padding:32px;margin-bottom:20px;transition:.3s;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.job-card:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(44,165,243,.12);transform:translateY(-2px)}
+.job-badge{display:inline-block;padding:4px 14px;border-radius:50px;font-size:12px;font-weight:800;letter-spacing:.5px}
+.badge-ft{background:#d4edff;color:var(--blue)}
+.badge-pt{background:#d4fff9;color:#00a085}
+.badge-contract{background:#fff3d4;color:#cc7700}
+</style>
 </head>
 <body>
-<header id="navbar"><div class="nav-inner"><a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div><span class="nav-logo-text">my<span>Onsite</span> Healthcare</span></a><nav class="nav-links"><div class="nav-item"><button class="nav-link">Services ▾</button><div class="dropdown-menu"><a href="index.html#services" class="dropdown-link">🏠 Home Blood Draw</a><a href="clinical-trials.html" class="dropdown-link">🔬 Clinical Trials</a><a href="index.html#services" class="dropdown-link">⚖️ Legal Services</a><a href="index.html#services" class="dropdown-link">🏢 Corporate Wellness</a></div></div><div class="nav-item"><button class="nav-link">Coverage ▾</button><div class="dropdown-menu"><a href="mobile-phlebotomy-california.html" class="dropdown-link">🌴 California</a><a href="mobile-phlebotomy-florida.html" class="dropdown-link">☀️ Florida</a><a href="mobile-phlebotomy-new-york.html" class="dropdown-link">🍎 New York</a><a href="mobile-phlebotomy-new-jersey.html" class="dropdown-link">🗽 New Jersey</a><a href="mobile-phlebotomy-connecticut.html" class="dropdown-link">🏛 Connecticut</a><a href="mobile-phlebotomy-massachusetts.html" class="dropdown-link">🦞 Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html" class="dropdown-link">⛰ New Hampshire</a></div></div><a href="blog.html" class="nav-link">Blog</a><a href="about.html" class="nav-link">About</a><a href="careers.html" class="nav-link">Careers</a></nav><a href="tel:9412710701" class="nav-cta">Book a Draw →</a><button class="hamburger" onclick="toggleMenu()">☰</button></div><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="index.html#services">Services</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="tel:9412710701" class="mobile-cta">📞 Book a Draw — (941) 271-0701</a></div></header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Join the Future of Healthcare Delivery</h1>
-    <p class="hero-subtitle">Make a difference from day one. Flexible schedules. Competitive pay. Real impact.</p>
-  </div>
-</section>
-<!-- WHY WORK HERE -->
-<section class="section why-work">
-  <h2>Why Work at myOnsite?</h2>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon">🎯</div>
-      <h3>Mission-Driven Work</h3>
-      <p>Every phlebotomist directly impacts patient lives. You're removing barriers to healthcare and enabling clinical research that saves lives.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">⏰</div>
-      <h3>Flexible Schedule</h3>
-      <p>Choose your own hours. Work early mornings, evenings, or weekends. Balance work with life priorities. Part-time and full-time roles available.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">💰</div>
-      <h3>Competitive Pay</h3>
-      <p>Earn $22-28/hour as a phlebotomist, up to $30/hour for lead roles. Mileage reimbursement + equipment provided. Performance bonuses.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">📈</div>
-      <h3>Growth Opportunities</h3>
-      <p>Become a Lead Phlebotomist, Clinical Operations Coordinator, or Business Development Rep. We support continuing education and certifications.</p>
-    </div>
-  </div>
+<div class="top-bar"><div class="inner"><span><i class="fas fa-phone"></i> <a href="tel:+18885669990">1 (888) 566-9990</a> &nbsp;|&nbsp; Fax: (949) 565-4370</span><span><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></span></div></div>
+<nav class="site-nav"><div class="nav-inner">
+  <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dqcxziqwp/images/v1754467289/final-logo-size-1/final-logo-size-1.png?_i=AA" alt="myOnsite Healthcare"></a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="clinical-trials.html">Clinical Trials</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html" class="active">Careers</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</div></nav>
+<a href="contact.html" class="float-contact">Contact Us</a>
+<section class="page-hero">
+  <h1>Join Our Team</h1>
+  <p>Be part of a mission-driven team transforming how patients access healthcare across America.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Careers</div>
 </section>
 
-<!-- OPEN POSITIONS -->
-<section class="section positions">
-  <h2>We're Hiring</h2>
-  <div class="jobs-grid">
-    <!-- Job 1 -->
+<!-- Why Work With Us -->
+<section style="padding:80px 20px;background:#fff">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <p style="color:var(--teal);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Why myOnsite</p>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900">Make a Real Difference Every Day</h2>
+      <p style="color:#555;font-size:17px;max-width:600px;margin:16px auto 0">Our mobile healthcare professionals don't just draw blood — they bring comfort, compassion, and clinical excellence to patients who need it most.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div style="text-align:center;padding:36px 24px;background:var(--bg);border-radius:16px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><i class="fas fa-calendar-alt" style="color:#fff;font-size:28px"></i></div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Flexible Schedules</h3>
+        <p style="color:#555;line-height:1.7;font-size:15px">Choose your own hours and coverage area. We offer part-time, full-time, and per-diem positions to fit your lifestyle.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--bg);border-radius:16px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><i class="fas fa-dollar-sign" style="color:#fff;font-size:28px"></i></div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Competitive Pay</h3>
+        <p style="color:#555;line-height:1.7;font-size:15px">We offer above-market compensation, mileage reimbursement, bonus programs, and comprehensive benefits for eligible employees.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--bg);border-radius:16px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><i class="fas fa-graduation-cap" style="color:#fff;font-size:28px"></i></div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Grow Your Career</h3>
+        <p style="color:#555;line-height:1.7;font-size:15px">Access ongoing training, clinical trial certifications, continuing education support, and clear pathways for career advancement.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--bg);border-radius:16px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><i class="fas fa-shield-alt" style="color:#fff;font-size:28px"></i></div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Full Support</h3>
+        <p style="color:#555;line-height:1.7;font-size:15px">We provide all equipment, supplies, uniforms, and dispatch support so you can focus on delivering excellent patient care.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--bg);border-radius:16px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><i class="fas fa-heart" style="color:#fff;font-size:28px"></i></div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Meaningful Impact</h3>
+        <p style="color:#555;line-height:1.7;font-size:15px">Our patients are elderly, homebound, or chronically ill. Your work directly improves their quality of life every single day.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--bg);border-radius:16px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><i class="fas fa-users" style="color:#fff;font-size:28px"></i></div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Great Team Culture</h3>
+        <p style="color:#555;line-height:1.7;font-size:15px">Join a diverse, supportive team that celebrates your wins, has your back, and genuinely cares about your wellbeing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Open Positions -->
+<section style="padding:80px 20px;background:var(--bg)">
+  <div style="max-width:1000px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <p style="color:var(--teal);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Now Hiring</p>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900">Open Positions</h2>
+    </div>
+
     <div class="job-card">
-      <h3>Certified Phlebotomist</h3>
-      <div class="job-meta">
-        <span class="job-badge">📍 Multiple States</span>
-        <span class="job-badge">⏱️ Full/Part-time</span>
+      <div>
+        <div style="margin-bottom:12px"><span class="job-badge badge-ft">Full-Time</span>&nbsp;<span style="font-size:13px;color:#888">Multiple Locations</span></div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Mobile Phlebotomist</h3>
+        <p style="color:#555;font-size:15px;line-height:1.7;margin-bottom:16px">Perform professional blood draws and specimen collections at patient homes, facilities, and corporate sites. Requires NPA, ASCP, or AMT certification and valid driver's license.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">CA</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">NV</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">AZ</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">TX</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">FL</span></div>
       </div>
-      <p>Join our mobile phlebotomy team and collect specimens from patients in their homes and workplaces. You'll be the face of myOnsite Healthcare — bringing compassionate, professional care directly to patients.</p>
-      <div class="job-requirements">
-        <h4>Key Requirements</h4>
-        <ul>
-          <li>Active CPT (Certified Phlebotomy Technician) or ASCP certification</li>
-          <li>Clean driving record & reliable vehicle</li>
-          <li>Excellent communication & customer service skills</li>
-          <li>Ability to work independently across multiple locations</li>
-          <li>HIPAA compliance & confidentiality awareness</li>
-        </ul>
-      </div>
-      <button class="job-apply">Apply Now →</button>
+      <a href="contact.html" style="display:inline-block;background:var(--grad);color:#fff;font-weight:800;padding:14px 32px;border-radius:50px;white-space:nowrap;font-size:15px">Apply Now</a>
     </div>
 
-    <!-- Job 2 -->
     <div class="job-card">
-      <h3>Lead Phlebotomist / Team Lead</h3>
-      <div class="job-meta">
-        <span class="job-badge">📍 Regional</span>
-        <span class="job-badge">⏱️ Full-time</span>
+      <div>
+        <div style="margin-bottom:12px"><span class="job-badge badge-ft">Full-Time</span>&nbsp;<span style="font-size:13px;color:#888">Remote + Field</span></div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Clinical Research Coordinator</h3>
+        <p style="color:#555;font-size:15px;line-height:1.7;margin-bottom:16px">Coordinate mobile specimen collections for Phase I–IV clinical trials. Manage protocol adherence, kit handling, chain of custody documentation, and lab communications. ICH-GCP certification preferred.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">Clinical Trials</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">Research</span></div>
       </div>
-      <p>Lead a team of phlebotomists across a region. Manage schedules, ensure quality compliance, mentor team members, and maintain the highest standards of patient care and specimen handling.</p>
-      <div class="job-requirements">
-        <h4>Key Requirements</h4>
-        <ul>
-          <li>2+ years phlebotomy experience (1+ in leadership preferred)</li>
-          <li>CPT or ASCP certification required</li>
-          <li>Strong team management & communication skills</li>
-          <li>Knowledge of CLIA, HIPAA, and compliance standards</li>
-          <li>Problem-solving & conflict resolution abilities</li>
-        </ul>
-      </div>
-      <button class="job-apply">Apply Now →</button>
+      <a href="contact.html" style="display:inline-block;background:var(--grad);color:#fff;font-weight:800;padding:14px 32px;border-radius:50px;white-space:nowrap;font-size:15px">Apply Now</a>
     </div>
 
-    <!-- Job 3 -->
     <div class="job-card">
-      <h3>Clinical Operations Coordinator</h3>
-      <div class="job-meta">
-        <span class="job-badge">📍 Headquarters</span>
-        <span class="job-badge">⏱️ Full-time</span>
+      <div>
+        <div style="margin-bottom:12px"><span class="job-badge badge-pt">Part-Time</span>&nbsp;<span style="font-size:13px;color:#888">All Service Areas</span></div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Mobile Medical Assistant</h3>
+        <p style="color:#555;font-size:15px;line-height:1.7;margin-bottom:16px">Support mobile health screenings, wellness events, and flu shot programs. CMA or RMA certification required. Excellent patient communication skills essential.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">Flexible Hours</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">Events</span></div>
       </div>
-      <p>Support our clinical operations team. Schedule collections, manage specimen tracking, coordinate with CROs and sponsors, and ensure seamless execution of mobile phlebotomy services across all states.</p>
-      <div class="job-requirements">
-        <h4>Key Requirements</h4>
-        <ul>
-          <li>Experience in clinical operations or healthcare coordination</li>
-          <li>Excellent organizational & time management skills</li>
-          <li>Proficiency with scheduling software & data management</li>
-          <li>HIPAA certification preferred</li>
-          <li>Attention to detail & quality assurance mindset</li>
-        </ul>
-      </div>
-      <button class="job-apply">Apply Now →</button>
+      <a href="contact.html" style="display:inline-block;background:var(--grad);color:#fff;font-weight:800;padding:14px 32px;border-radius:50px;white-space:nowrap;font-size:15px">Apply Now</a>
     </div>
 
-    <!-- Job 4 -->
     <div class="job-card">
-      <h3>Business Development Representative</h3>
-      <div class="job-meta">
-        <span class="job-badge">📍 Remote / Travel</span>
-        <span class="job-badge">⏱️ Full-time</span>
+      <div>
+        <div style="margin-bottom:12px"><span class="job-badge badge-contract">Contract</span>&nbsp;<span style="font-size:13px;color:#888">Remote</span></div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Patient Scheduling Coordinator</h3>
+        <p style="color:#555;font-size:15px;line-height:1.7;margin-bottom:16px">Manage inbound appointment requests, coordinate mobile phlebotomist schedules, and ensure seamless patient communication. Healthcare scheduling experience preferred.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">Remote</span><span style="background:#f0f0f0;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:600">Customer Service</span></div>
       </div>
-      <p>Build relationships with CROs, sponsors, and healthcare systems. Present myOnsite's decentralized trial solutions, identify partnership opportunities, and drive revenue growth in clinical trials segment.</p>
-      <div class="job-requirements">
-        <h4>Key Requirements</h4>
-        <ul>
-          <li>2+ years B2B sales or business development experience</li>
-          <li>Knowledge of clinical trials or healthcare industry preferred</li>
-          <li>Excellent communication & relationship-building skills</li>
-          <li>Self-motivated with ability to hit targets</li>
-          <li>Comfort with travel (20-30% estimated)</li>
-        </ul>
-      </div>
-      <button class="job-apply">Apply Now →</button>
-    </div>
-  </div>
-</section>
-<!-- BENEFITS -->
-<section class="section benefits">
-  <h2>Comprehensive Benefits</h2>
-  <div class="benefits-grid">
-    <div class="benefit-item">
-      <h3>🏥 Health Insurance</h3>
-      <p>Medical, dental, and vision coverage for full-time employees. Company contributes 80% of premiums.</p>
-    </div>
-    <div class="benefit-item">
-      <h3>🚗 Mileage Reimbursement</h3>
-      <p>Full reimbursement for all business miles at IRS rates. No out-of-pocket expenses.</p>
-    </div>
-    <div class="benefit-item">
-      <h3>⏰ Flexible Hours</h3>
-      <p>Choose your schedule. Early morning, evening, weekend shifts available. Set your own availability.</p>
-    </div>
-    <div class="benefit-item">
-      <h3>📚 Training & Certification</h3>
-      <p>We provide continuing education support. Tuition assistance for advanced certifications and degree programs.</p>
-    </div>
-    <div class="benefit-item">
-      <h3>🎁 Equipment Provided</h3>
-      <p>All phlebotomy equipment, collection kits, and uniforms provided at no cost. Professional gear included.</p>
-    </div>
-    <div class="benefit-item">
-      <h3>🎉 Performance Bonuses</h3>
-      <p>Earn bonuses for exceeding collections targets, perfect compliance, and patient satisfaction ratings.</p>
+      <a href="contact.html" style="display:inline-block;background:var(--grad);color:#fff;font-weight:800;padding:14px 32px;border-radius:50px;white-space:nowrap;font-size:15px">Apply Now</a>
     </div>
   </div>
 </section>
 
-<!-- EARNINGS CALCULATOR -->
-<section class="section calculator">
-  <h2>Phlebotomist Earnings Potential</h2>
-  <div class="calc-card">
-    <div class="calc-header">
-      <h3>See What You Can Earn</h3>
-      <p style="color: #6b7280; margin: 0;">Based on typical full-time work (40 hrs/week, 50 weeks/year)</p>
-    </div>
-    <div class="calc-row">
-      <span class="calc-label">Hourly Rate</span>
-      <span class="calc-value">$24/hr (avg)</span>
-    </div>
-    <div class="calc-row">
-      <span class="calc-label">Hours Per Week</span>
-      <span class="calc-value">40</span>
-    </div>
-    <div class="calc-row">
-      <span class="calc-label">Weeks Per Year</span>
-      <span class="calc-value">50</span>
-    </div>
-    <div class="calc-row">
-      <span class="calc-label">Mileage (avg 200 mi/week @ $0.67)</span>
-      <span class="calc-value">$6,700/year</span>
-    </div>
-    <div class="calc-row">
-      <span class="calc-label">Performance Bonuses (avg)</span>
-      <span class="calc-value">$2,000-3,000/year</span>
-    </div>
-    <div class="calc-row">
-      <span class="calc-label"><strong>Total Annual Compensation</strong></span>
-      <span class="calc-value">$54,700 - $55,700</span>
-    </div>
+<!-- CTA -->
+<section style="background:var(--grad);padding:70px 20px;text-align:center;color:#fff">
+  <div style="max-width:700px;margin:0 auto">
+    <h2 style="font-size:clamp(28px,4vw,42px);font-weight:900;margin-bottom:16px">Don't See Your Role?</h2>
+    <p style="font-size:18px;opacity:.92;margin-bottom:36px">We're always looking for talented healthcare professionals. Send us your resume and let's talk.</p>
+    <a href="mailto:careers@myonsitehealthcare.com" style="display:inline-block;background:#fff;color:var(--blue);font-weight:800;font-size:17px;padding:16px 48px;border-radius:50px;margin-right:12px"><i class="fas fa-envelope"></i> Send Your Resume</a>
+    <a href="tel:+18885669990" style="display:inline-block;background:var(--yellow);color:#232020;font-weight:800;font-size:17px;padding:16px 40px;border-radius:50px;margin-top:12px"><i class="fas fa-phone"></i> Call Us</a>
   </div>
 </section>
-
-<!-- TESTIMONIALS -->
-<section class="section testimonials">
-  <h2>What Our Team Says</h2>
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-avatar">👩‍⚕️</div>
-      <p class="testimonial-name">Sarah Martinez</p>
-      <p class="testimonial-role">Certified Phlebotomist, Florida</p>
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-quote">"I love the flexibility. I work around my kids' school schedule, and the mileage reimbursement + hourly rate means I actually make more than at the clinic. Plus, seeing patients smile when I show up at their door makes every collection meaningful."</p>
+<footer style="background:#1a2332;color:#ccc;padding:60px 20px 30px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px">
+      <div><img src="https://res.cloudinary.com/dqcxziqwp/images/v1754467289/final-logo-size-1/final-logo-size-1.png?_i=AA" alt="myOnsite Healthcare" style="height:48px;margin-bottom:16px;filter:brightness(0) invert(1)"><p style="line-height:1.8;color:#aaa;max-width:280px;font-size:14px">Bringing professional laboratory and clinical trial services directly to patients across 7 states.</p></div>
+      <div><h4 style="color:#fff;font-size:15px;font-weight:800;margin-bottom:16px">Services</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px"><li><a href="index.html" style="color:#aaa;font-size:14px">Home Blood Draws</a></li><li><a href="clinical-trials.html" style="color:#aaa;font-size:14px">Clinical Trials</a></li><li><a href="index.html" style="color:#aaa;font-size:14px">Anti-Coagulation</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:15px;font-weight:800;margin-bottom:16px">Company</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px"><li><a href="about.html" style="color:#aaa;font-size:14px">About Us</a></li><li><a href="careers.html" style="color:#aaa;font-size:14px">Careers</a></li><li><a href="blog.html" style="color:#aaa;font-size:14px">Blog</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:15px;font-weight:800;margin-bottom:16px">Contact</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px"><li style="font-size:14px;color:#aaa"><i class="fas fa-phone" style="color:var(--teal);margin-right:8px"></i><a href="tel:+18885669990" style="color:#aaa">1 (888) 566-9990</a></li><li style="font-size:14px;color:#aaa"><i class="fas fa-fax" style="color:var(--teal);margin-right:8px"></i>Fax: (949) 565-4370</li></ul></div>
     </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-avatar">👨‍🔬</div>
-      <p class="testimonial-name">James Chen</p>
-      <p class="testimonial-role">Lead Phlebotomist, California</p>
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-quote">"I started as a phlebotomist and was promoted to Lead within 18 months. The company truly invests in their team. I'm now mentoring 8 phlebotomists and love the leadership opportunity. The training support is unmatched."</p>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-avatar">👩‍💼</div>
-      <p class="testimonial-name">Maria Rodriguez</p>
-      <p class="testimonial-role">Clinical Operations Coordinator, New York</p>
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-quote">"Working in clinical trials operations is incredibly fulfilling. I see the direct impact we have on research outcomes. My team is supportive, the culture is inclusive, and management genuinely cares about work-life balance."</p>
-    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:20px;text-align:center;font-size:13px;color:#888">© 2024 myOnsite Healthcare. All rights reserved.</div>
   </div>
-</section>
-<!-- REQUIREMENTS FOR ALL ROLES -->
-<section class="section requirements">
-  <h2>General Requirements & How To Apply</h2>
-  <div class="req-grid">
-    <div class="req-card">
-      <h3>Phlebotomy Specific</h3>
-      <ul>
-        <li>Current phlebotomy certification (CPT, ASCP, or equivalent)</li>
-        <li>Clean driving record</li>
-        <li>Reliable vehicle with insurance</li>
-        <li>Physical ability to draw blood safely</li>
-        <li>HIPAA & infection control training</li>
-      </ul>
-    </div>
-    <div class="req-card">
-      <h3>General Requirements</h3>
-      <ul>
-        <li>Pass background check</li>
-        <li>Pass drug screening</li>
-        <li>Professional demeanor & strong communication</li>
-        <li>Attention to detail & quality focus</li>
-        <li>Reliability & time management</li>
-      </ul>
-    </div>
-    <div class="req-card">
-      <h3>Nice to Have</h3>
-      <ul>
-        <li>Clinical trials experience</li>
-        <li>Healthcare IT familiarity</li>
-        <li>Bilingual (Spanish + English)</li>
-        <li>Leadership or mentoring experience</li>
-        <li>Advanced certifications</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- APPLICATION FORM -->
-<section class="section">
-  <h2>Apply Now</h2>
-  <div class="application">
-    <h3>Career Application</h3>
-    <form>
-      <div class="form-group">
-        <label>Full Name *</label>
-        <input type="text" required>
-      </div>
-      <div class="form-group">
-        <label>Email Address *</label>
-        <input type="email" required>
-      </div>
-      <div class="form-group">
-        <label>Phone Number *</label>
-        <input type="tel" required>
-      </div>
-      <div class="form-group">
-        <label>Applying For *</label>
-        <select required>
-          <option>Select a position...</option>
-          <option>Certified Phlebotomist</option>
-          <option>Lead Phlebotomist / Team Lead</option>
-          <option>Clinical Operations Coordinator</option>
-          <option>Business Development Representative</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Preferred State(s) *</label>
-        <select required>
-          <option>Select state...</option>
-          <option>California</option>
-          <option>Florida</option>
-          <option>New York</option>
-          <option>New Jersey</option>
-          <option>Connecticut</option>
-          <option>Massachusetts</option>
-          <option>New Hampshire</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Current Certifications</label>
-        <input type="text" placeholder="e.g., CPT, ASCP, Additional certifications">
-      </div>
-      <div class="form-group">
-        <label>Years of Experience</label>
-        <select>
-          <option>Select...</option>
-          <option>0-1 year</option>
-          <option>1-3 years</option>
-          <option>3-5 years</option>
-          <option>5+ years</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Upload Resume</label>
-        <input type="file" accept=".pdf,.doc,.docx">
-      </div>
-      <div class="form-group">
-        <label>Tell us why you're interested in this role</label>
-        <textarea placeholder="Share what excites you about myOnsite Healthcare..."></textarea>
-      </div>
-      <button type="submit" class="form-submit">Submit Application</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer"><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center;font-size:16px">🩸</div><span style="font-family:Sora,sans-serif;font-weight:700;color:white;font-size:16px">my<span style="color:#22d3ee">Onsite</span> Healthcare</span></div><p style="color:#4b5563;font-size:14px;line-height:1.7;max-width:280px;margin-bottom:20px">Bringing certified phlebotomy and mobile lab services directly to patients across 7 states.</p><div><a href="tel:9412710701" style="display:flex;align-items:center;gap:8px;color:#6b7280;font-size:13px;margin-bottom:6px;text-decoration:none">📞 (941) 271-0701</a><p style="color:#6b7280;font-size:13px">🖨️ Fax: (877) 471-1327</p></div></div><div class="footer-col"><h4>Services</h4><a href="index.html#services">Mobile Phlebotomy</a><a href="clinical-trials.html">Clinical Trials</a><a href="index.html#services">Legal Services</a><a href="index.html#services">Corporate Wellness</a><a href="index.html#services">Event Services</a></div><div class="footer-col"><h4>Coverage</h4><a href="mobile-phlebotomy-california.html">California</a><a href="mobile-phlebotomy-florida.html">Florida</a><a href="mobile-phlebotomy-new-york.html">New York</a><a href="mobile-phlebotomy-new-jersey.html">New Jersey</a><a href="mobile-phlebotomy-connecticut.html">Connecticut</a><a href="mobile-phlebotomy-massachusetts.html">Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html">New Hampshire</a></div><div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="clinical-trials.html">Clinical Trials</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div></div><div class="footer-bottom"><p>© 2026 myOnsite Healthcare. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">HIPAA Notice</a><span class="hipaa-badge">🔒 HIPAA Compliant</span></div></div></footer><script src="assets/script.js"></script>
-
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('mobileNav');
-  menu.classList.toggle('open');
-}
-</script>
+</footer>
+<script>document.querySelector('.hamburger').addEventListener('click',()=>{document.querySelector('.nav-links').classList.toggle('open')});</script>
 </body>
 </html>

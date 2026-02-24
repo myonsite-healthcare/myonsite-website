@@ -1,238 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="assets/styles.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/tailwind.min.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | myOnsite Healthcare – Mobile Phlebotomy & Lab Services</title>
+<meta name="description" content="Learn about myOnsite Healthcare's mission to bring lab testing and clinical trial services directly to patients across 7 states. 50,000+ patients served with 4.9★ rating.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+:root{--blue:#2CA5F3;--teal:#34CFD1;--yellow:#FFC100;--body:#232020;--bg:#F7F8FA;--alt:#EDEDFF;--grad:linear-gradient(90deg,#2CA5F3 0%,#34CFD1 100%)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;color:var(--body);background:#fff}
+a{text-decoration:none;color:inherit}
+
+/* TOP BAR */
+.top-bar{background:var(--grad);color:#fff;font-size:13px;padding:8px 0}
+.top-bar .inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.top-bar a{color:#fff;margin-left:16px}
+.top-bar a:hover{opacity:.8}
+
+/* NAV */
+.site-nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:999}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo img{height:52px;width:auto}
+.nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+.nav-links a{font-size:14px;font-weight:700;color:var(--body);padding:8px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--grad);color:#fff !important;border-radius:50px !important;padding:10px 22px !important}
+.nav-cta:hover{opacity:.9;color:#fff !important}
+.hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--body)}
+@media(max-width:1024px){.nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:#fff;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.12)}.nav-links.open{display:flex}.hamburger{display:block}}
+
+/* FLOATING CONTACT */
+.float-contact{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1000;background:var(--grad);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;padding:18px 10px;font-size:13px;font-weight:700;border-radius:8px 0 0 8px;cursor:pointer;letter-spacing:1px;box-shadow:-2px 2px 10px rgba(0,0,0,.15)}
+.float-contact:hover{opacity:.9}
+
+/* PAGE HERO */
+.page-hero{background:var(--grad);position:relative;overflow:hidden;padding:80px 20px 60px;text-align:center;color:#fff}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('https://myonsitehealthcare.com/wp-content/themes/Divi_Child/img/patten_dots.png') repeat;opacity:.12}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;position:relative;margin-bottom:16px}
+.page-hero p{font-size:18px;opacity:.92;max-width:600px;margin:0 auto;position:relative}
+.breadcrumb{position:relative;margin-top:20px;font-size:14px;opacity:.85}
+.breadcrumb a{color:#fff;font-weight:600}
+.breadcrumb span{margin:0 8px}
+</style>
 </head>
-<body class="bg-white text-gray-900">
-<header id="navbar">
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="inner">
+    <span><i class="fas fa-phone"></i> <a href="tel:+18885669990">1 (888) 566-9990</a> &nbsp;|&nbsp; <i class="fas fa-fax"></i> Fax: (949) 565-4370</span>
+    <span>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
-      <span class="nav-logo-text">my<span>Onsite</span> Healthcare</span>
+    <a href="index.html" class="logo">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/v1754467289/final-logo-size-1/final-logo-size-1.png?_i=AA" alt="myOnsite Healthcare">
     </a>
-    <nav class="nav-links">
-      <div class="nav-item"><button class="nav-link">Services ▾</button><div class="dropdown-menu"><a href="index.html#services" class="dropdown-link">🏠 Home Blood Draw</a><a href="clinical-trials.html" class="dropdown-link">🔬 Clinical Trials</a><a href="index.html#services" class="dropdown-link">⚖️ Legal Services</a><a href="index.html#services" class="dropdown-link">🏢 Corporate Wellness</a></div></div>
-      <div class="nav-item"><button class="nav-link">Coverage ▾</button><div class="dropdown-menu"><a href="mobile-phlebotomy-california.html" class="dropdown-link">🌴 California</a><a href="mobile-phlebotomy-florida.html" class="dropdown-link">☀️ Florida</a><a href="mobile-phlebotomy-new-york.html" class="dropdown-link">🍎 New York</a><a href="mobile-phlebotomy-new-jersey.html" class="dropdown-link">🗽 New Jersey</a><a href="mobile-phlebotomy-connecticut.html" class="dropdown-link">🏛 Connecticut</a><a href="mobile-phlebotomy-massachusetts.html" class="dropdown-link">🦞 Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html" class="dropdown-link">⛰ New Hampshire</a></div></div>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-    </nav>
-    <a href="tel:9412710701" class="nav-cta">Book a Draw →</a>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="clinical-trials.html">Clinical Trials</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
   </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#services">Services</a>
-    <a href="index.html#coverage">Coverage</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="tel:9412710701" class="mobile-cta">📞 Book a Draw — (941) 271-0701</a>
-  </div>
-</header>
+</nav>
 
-<!-- Hero Section with DNA Illustration -->
-<section class="gradient-hero" style="min-height: 500px; display: flex; align-items: center; justify-content: space-between; padding: 60px 40px; position: relative; overflow: hidden;">
-  <div style="flex: 1; max-width: 550px; z-index: 2;">
-    <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 20px; color: white; line-height: 1.2;">Healthier Patients, Better Results</h1>
-    <p style="font-size: 20px; color: rgba(255,255,255,0.9); margin-bottom: 10px; line-height: 1.6;">We eliminate geographic barriers to quality laboratory testing. Your health deserves accessibility.</p>
-  </div>
-  <div style="flex: 1; display: flex; align-items: center; justify-content: center; opacity: 0.9;">
-    <svg width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- DNA Helix -->
-      <path d="M 100 20 Q 110 50 100 80 Q 90 110 100 140 Q 110 170 100 180" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
-      <path d="M 100 20 Q 90 50 100 80 Q 110 110 100 140 Q 90 170 100 180" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
-      <!-- Base Pairs -->
-      <line x1="85" y1="30" x2="115" y2="30" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <line x1="88" y1="60" x2="112" y2="60" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <line x1="85" y1="90" x2="115" y2="90" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <line x1="88" y1="120" x2="112" y2="120" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <line x1="85" y1="150" x2="115" y2="150" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <!-- Atoms -->
-      <circle cx="85" cy="30" r="3" fill="white"/>
-      <circle cx="115" cy="30" r="3" fill="white"/>
-      <circle cx="88" cy="60" r="3" fill="white"/>
-      <circle cx="112" cy="60" r="3" fill="white"/>
-      <circle cx="85" cy="90" r="3" fill="white"/>
-      <circle cx="115" cy="90" r="3" fill="white"/>
-      <circle cx="88" cy="120" r="3" fill="white"/>
-      <circle cx="112" cy="120" r="3" fill="white"/>
-      <circle cx="85" cy="150" r="3" fill="white"/>
-      <circle cx="115" cy="150" r="3" fill="white"/>
-    </svg>
-  </div>
+<!-- Floating Contact -->
+<a href="contact.html" class="float-contact">Contact Us</a>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <h1>About myOnsite Healthcare</h1>
+  <p>Bringing world-class laboratory and clinical trial services directly to patients — wherever they are.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>About Us</div>
 </section>
 
-<!-- Stats Section -->
-<section style="background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%); padding: 80px 40px; text-align: center;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 60px; color: #1e293b;">By The Numbers</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-    <div style="padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
-      <div style="font-size: 48px; font-weight: 800; color: #0ea5e9; margin-bottom: 10px;">50,000+</div>
-      <p style="font-size: 16px; color: #64748b; font-weight: 600;">Patients Served</p>
+<!-- Company Story -->
+<section style="padding:80px 20px;background:#fff">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+    <div>
+      <p style="color:var(--teal);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Our Story</p>
+      <h2 style="font-size:clamp(28px,4vw,42px);font-weight:900;line-height:1.2;margin-bottom:24px">Redefining Healthcare Delivery Since 2016</h2>
+      <p style="font-size:17px;line-height:1.8;color:#555;margin-bottom:20px">myOnsite Healthcare was founded with one powerful idea: healthcare should come to you. We recognized that millions of patients — elderly, homebound, immunocompromised, or simply time-constrained — struggled to access basic laboratory services.</p>
+      <p style="font-size:17px;line-height:1.8;color:#555;margin-bottom:20px">Our certified mobile phlebotomists and clinical specialists now serve patients across 7 states, partnering with leading health systems, clinical research organizations, and individual patients to deliver laboratory excellence at the doorstep.</p>
+      <p style="font-size:17px;line-height:1.8;color:#555">From routine blood draws to complex clinical trial specimen management, we handle it all — with the professionalism, compassion, and reliability that our 50,000+ patients have come to trust.</p>
     </div>
-    <div style="padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
-      <div style="font-size: 48px; font-weight: 800; color: #10b981; margin-bottom: 10px;">7</div>
-      <p style="font-size: 16px; color: #64748b; font-weight: 600;">States Covered</p>
-    </div>
-    <div style="padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
-      <div style="font-size: 48px; font-weight: 800; color: #f59e0b; margin-bottom: 10px;">4.9★</div>
-      <p style="font-size: 16px; color: #64748b; font-weight: 600;">Patient Rating</p>
-    </div>
-    <div style="padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
-      <div style="font-size: 48px; font-weight: 800; color: #8b5cf6; margin-bottom: 10px;">10+</div>
-      <p style="font-size: 16px; color: #64748b; font-weight: 600;">Years of Experience</p>
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(44,165,243,.15)">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_750,h_500,dpr_1.7999999523162842/f_auto,q_auto/v1738840132/Get-to-know-myOnsite-750x500-px/Get-to-know-myOnsite-750x500-px.jpg?_i=AA" alt="Get to know myOnsite Healthcare" style="width:100%;display:block">
     </div>
   </div>
 </section>
 
-<!-- Founded Story -->
-<section style="padding: 80px 40px; max-width: 1000px; margin: 0 auto;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 30px; color: #1e293b;">Our Origin Story</h2>
-  <p style="font-size: 18px; color: #475569; line-height: 1.8; margin-bottom: 20px;">myOnsite Healthcare was founded on a simple yet powerful belief: <strong>geography should never determine healthcare quality</strong>. We recognized a critical gap in the healthcare system—millions of patients faced unnecessary barriers to essential lab testing, whether due to mobility challenges, rural locations, or busy schedules.</p>
-  <p style="font-size: 18px; color: #475569; line-height: 1.8;">Our founder saw firsthand how patients struggled to access timely, professional phlebotomy services. That inspired us to build a mobile solution that brings certified phlebotomists directly to patients' homes, offices, and facilities. Today, we've transformed healthcare accessibility for over 50,000 patients across 7 states, and we're just getting started.</p>
+<!-- Stats Row -->
+<section style="background:var(--grad);padding:60px 20px;color:#fff">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center">
+    <div>
+      <div style="font-size:clamp(40px,5vw,64px);font-weight:900;line-height:1">50K+</div>
+      <div style="font-size:16px;opacity:.9;margin-top:8px;font-weight:600">Patients Served</div>
+    </div>
+    <div>
+      <div style="font-size:clamp(40px,5vw,64px);font-weight:900;line-height:1">7</div>
+      <div style="font-size:16px;opacity:.9;margin-top:8px;font-weight:600">States Covered</div>
+    </div>
+    <div>
+      <div style="font-size:clamp(40px,5vw,64px);font-weight:900;line-height:1">4.9★</div>
+      <div style="font-size:16px;opacity:.9;margin-top:8px;font-weight:600">Average Rating</div>
+    </div>
+    <div>
+      <div style="font-size:clamp(40px,5vw,64px);font-weight:900;line-height:1">8+</div>
+      <div style="font-size:16px;opacity:.9;margin-top:8px;font-weight:600">Years of Excellence</div>
+    </div>
+  </div>
 </section>
 
 <!-- Mission Vision Values -->
-<section style="padding: 80px 40px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 60px; text-align: center; color: white;">Our Purpose</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-    <div style="padding: 40px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-      <div style="font-size: 32px; margin-bottom: 15px;">🎯</div>
-      <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #60a5fa;">Mission</h3>
-      <p style="font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.85);">To provide accessible, professional, and compassionate laboratory services that empower patients to take control of their health, regardless of location or circumstance.</p>
+<section style="padding:80px 20px;background:var(--bg)">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <p style="color:var(--teal);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">What Drives Us</p>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900">Our Mission, Vision & Values</h2>
     </div>
-    <div style="padding: 40px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-      <div style="font-size: 32px; margin-bottom: 15px;">🌟</div>
-      <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #60a5fa;">Vision</h3>
-      <p style="font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.85);">To become the most trusted mobile phlebotomy provider in North America, setting the gold standard for convenience, quality, and patient care.</p>
-    </div>
-    <div style="padding: 40px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-      <div style="font-size: 32px; margin-bottom: 15px;">❤️</div>
-      <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #60a5fa;">Values</h3>
-      <p style="font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.85);">Patient-first, accuracy, compassion, innovation, and integrity guide every decision we make and every service we deliver.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Leadership Team -->
-<section style="padding: 80px 40px; max-width: 1200px; margin: 0 auto;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 60px; text-align: center; color: #1e293b;">Leadership Team</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-    <div style="text-align: center; padding: 30px; background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%); border-radius: 12px;">
-      <div style="font-size: 80px; margin-bottom: 20px;">👨‍⚕️</div>
-      <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #1e293b;">Dr. Marcus Reid</h3>
-      <p style="font-size: 14px; color: #0ea5e9; font-weight: 600; margin-bottom: 12px;">CEO & Founder</p>
-      <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Visionary leader with 15+ years in healthcare innovation and mobile clinical services.</p>
-    </div>
-    <div style="text-align: center; padding: 30px; background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%); border-radius: 12px;">
-      <div style="font-size: 80px; margin-bottom: 20px;">👩‍🔬</div>
-      <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #1e293b;">Dr. Sarah Chen</h3>
-      <p style="font-size: 14px; color: #0ea5e9; font-weight: 600; margin-bottom: 12px;">Chief Medical Officer</p>
-      <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Board-certified pathologist ensuring clinical excellence and quality standards across all operations.</p>
-    </div>
-    <div style="text-align: center; padding: 30px; background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%); border-radius: 12px;">
-      <div style="font-size: 80px; margin-bottom: 20px;">🎯</div>
-      <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #1e293b;">James Wilson</h3>
-      <p style="font-size: 14px; color: #0ea5e9; font-weight: 600; margin-bottom: 12px;">Director of Operations</p>
-      <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Operational strategist scaling services across 7 states while maintaining premium service quality.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Timeline -->
-<section style="padding: 80px 40px; background: #f8fafc;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 60px; text-align: center; color: #1e293b;">Our Journey</h2>
-  <div style="max-width: 900px; margin: 0 auto; position: relative;">
-    <div style="position: absolute; left: 50%; width: 2px; height: 100%; background: linear-gradient(180deg, #0ea5e9 0%, #10b981 100%); transform: translateX(-50%);"></div>
-    
-    <div style="margin-bottom: 40px; text-align: right; padding-right: 50%;">
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <p style="font-size: 18px; font-weight: 700; color: #0ea5e9; margin-bottom: 5px;">2018</p>
-        <p style="font-size: 16px; color: #475569; font-weight: 600;">Founded</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div style="background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06);border-top:4px solid var(--blue)">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <i class="fas fa-bullseye" style="color:#fff;font-size:28px"></i>
+        </div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:16px">Our Mission</h3>
+        <p style="color:#555;line-height:1.8;font-size:16px">To make high-quality laboratory and clinical services accessible to every patient — at home, at work, or wherever life takes them — through compassionate, professional mobile healthcare delivery.</p>
       </div>
-    </div>
-    
-    <div style="margin-bottom: 40px; text-align: left; padding-left: 50%;">
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <p style="font-size: 18px; font-weight: 700; color: #0ea5e9; margin-bottom: 5px;">2019</p>
-        <p style="font-size: 16px; color: #475569; font-weight: 600;">First 100 Patients Served</p>
+      <div style="background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06);border-top:4px solid var(--teal)">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <i class="fas fa-eye" style="color:#fff;font-size:28px"></i>
+        </div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:16px">Our Vision</h3>
+        <p style="color:#555;line-height:1.8;font-size:16px">To be the nation's most trusted mobile healthcare partner — setting the gold standard for on-site specimen collection, clinical trial support, and patient-centered care across the United States.</p>
       </div>
-    </div>
-    
-    <div style="margin-bottom: 40px; text-align: right; padding-right: 50%;">
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <p style="font-size: 18px; font-weight: 700; color: #0ea5e9; margin-bottom: 5px;">2020</p>
-        <p style="font-size: 16px; color: #475569; font-weight: 600;">Clinical Trial Partnerships</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 40px; text-align: left; padding-left: 50%;">
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <p style="font-size: 18px; font-weight: 700; color: #0ea5e9; margin-bottom: 5px;">2022</p>
-        <p style="font-size: 16px; color: #475569; font-weight: 600;">Expanded to 5 States</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 40px; text-align: right; padding-right: 50%;">
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <p style="font-size: 18px; font-weight: 700; color: #0ea5e9; margin-bottom: 5px;">2024</p>
-        <p style="font-size: 16px; color: #475569; font-weight: 600;">Launched Corporate Wellness</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 0; text-align: left; padding-left: 50%;">
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <p style="font-size: 18px; font-weight: 700; color: #10b981; margin-bottom: 5px;">2025</p>
-        <p style="font-size: 16px; color: #475569; font-weight: 600;">Serving 7 States, 50K+ Patients</p>
+      <div style="background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06);border-top:4px solid var(--yellow)">
+        <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#FFC100,#FF9500);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <i class="fas fa-heart" style="color:#fff;font-size:28px"></i>
+        </div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:16px">Our Values</h3>
+        <p style="color:#555;line-height:1.8;font-size:16px">Compassion, integrity, clinical excellence, and patient dignity guide everything we do. We treat every patient like family and every specimen with the precision that accurate diagnosis demands.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Certifications -->
-<section style="padding: 80px 40px;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 50px; text-align: center; color: #1e293b;">Trusted & Certified</h2>
-  <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
-    <div style="padding: 30px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px;">
-      <div style="font-size: 40px; margin-bottom: 15px;">🔒</div>
-      <h3 style="font-size: 18px; font-weight: 700; color: #92400e; margin-bottom: 8px;">HIPAA Compliant</h3>
-      <p style="font-size: 14px; color: #b45309;">Full patient data protection and privacy compliance.</p>
+<!-- Services We Offer -->
+<section style="padding:80px 20px;background:#fff">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <p style="color:var(--teal);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">What We Do</p>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900">Comprehensive Mobile Health Services</h2>
+      <p style="color:#555;font-size:17px;max-width:600px;margin:16px auto 0">From routine lab draws to complex clinical trial logistics, we bring the lab to you.</p>
     </div>
-    <div style="padding: 30px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-radius: 12px;">
-      <div style="font-size: 40px; margin-bottom: 15px;">✅</div>
-      <h3 style="font-size: 18px; font-weight: 700; color: #0c4a6e; margin-bottom: 8px;">CLIA-Certified Labs</h3>
-      <p style="font-size: 14px; color: #0369a1;">Clinical Laboratory Improvement Amendments certified.</p>
-    </div>
-    <div style="padding: 30px; background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); border-radius: 12px;">
-      <div style="font-size: 40px; margin-bottom: 15px;">📜</div>
-      <h3 style="font-size: 18px; font-weight: 700; color: #166534; margin-bottom: 8px;">NAACLS Certified</h3>
-      <p style="font-size: 14px; color: #15803d;">National Accrediting Agency for Clinical Laboratory Sciences.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:.3s" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'">
+        <div style="height:200px;background:var(--bg);display:flex;align-items:center;justify-content:center">
+          <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_96,h_96,dpr_1.7999999523162842/f_auto,q_auto/v1738840116/001-home-blood-draws-1/001-home-blood-draws-1.png?_i=AA" alt="Home Blood Draws" style="width:96px;height:96px">
+        </div>
+        <div style="padding:28px">
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Home Blood Draws</h3>
+          <p style="color:#555;line-height:1.7">Certified phlebotomists come to your home, office, or facility for routine and specialized lab specimen collection.</p>
+        </div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:.3s" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'">
+        <div style="height:200px;background:var(--bg);display:flex;align-items:center;justify-content:center">
+          <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_96,h_96,dpr_1.7999999523162842/f_auto,q_auto/v1738864245/002-clinical-trials-2/002-clinical-trials-2.png?_i=AA" alt="Clinical Trials" style="width:96px;height:96px">
+        </div>
+        <div style="padding:28px">
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Clinical Trials Support</h3>
+          <p style="color:#555;line-height:1.7">End-to-end mobile specimen collection and management for Phase I–IV clinical trials with strict protocol adherence.</p>
+        </div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:.3s" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'">
+        <div style="height:200px;background:var(--bg);display:flex;align-items:center;justify-content:center">
+          <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_96,h_96,dpr_1.7999999523162842/f_auto,q_auto/v1738840118/005-event-services-1/005-event-services-1.png?_i=AA" alt="Event Services" style="width:96px;height:96px">
+        </div>
+        <div style="padding:28px">
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:12px">Corporate & Event Services</h3>
+          <p style="color:#555;line-height:1.7">On-site health screenings, wellness events, and flu shot programs for corporations, senior communities, and health fairs.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section style="padding: 80px 40px; background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%); color: white; text-align: center;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: white;">Ready to Experience Better Healthcare?</h2>
-  <p style="font-size: 18px; margin-bottom: 30px; color: rgba(255,255,255,0.95);">Book your mobile blood draw today and join thousands of satisfied patients.</p>
-  <a href="tel:9412710701" style="display: inline-block; padding: 15px 40px; background: white; color: #0ea5e9; font-weight: 700; border-radius: 8px; text-decoration: none; font-size: 16px; transition: transform 0.2s;">📞 Call (941) 271-0701</a>
+<!-- Partners -->
+<section style="padding:70px 20px;background:var(--bg)">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <p style="color:var(--teal);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Trusted By</p>
+      <h2 style="font-size:clamp(24px,3vw,36px);font-weight:900">Our Healthcare Partners</h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_160,h_80,dpr_1.7999999523162842/f_auto,q_auto/v1738840168/Greater-Newport-Physicians/Greater-Newport-Physicians.png?_i=AA" alt="Greater Newport Physicians" style="height:60px;width:auto;filter:grayscale(100%);opacity:.7;transition:.3s" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='.7'">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_160,h_80,dpr_1.7999999523162842/f_auto,q_auto/v1738840168/Prospect-Medical/Prospect-Medical.png?_i=AA" alt="Prospect Medical" style="height:60px;width:auto;filter:grayscale(100%);opacity:.7;transition:.3s" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='.7'">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_160,h_80,dpr_1.7999999523162842/f_auto,q_auto/v1738840168/Monarch-Healthcare/Monarch-Healthcare.png?_i=AA" alt="Monarch Healthcare" style="height:60px;width:auto;filter:grayscale(100%);opacity:.7;transition:.3s" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='.7'">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_160,h_80,dpr_1.7999999523162842/f_auto,q_auto/v1738840168/HealthCare-Partners/HealthCare-Partners.png?_i=AA" alt="Healthcare Partners" style="height:60px;width:auto;filter:grayscale(100%);opacity:.7;transition:.3s" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='.7'">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_160,h_80,dpr_1.7999999523162842/f_auto,q_auto/v1738840155/UCLA-Health/UCLA-Health.png?_i=AA" alt="UCLA Health" style="height:60px;width:auto;filter:grayscale(100%);opacity:.7;transition:.3s" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='.7'">
+      <img src="https://res.cloudinary.com/dqcxziqwp/images/c_scale,w_160,h_80,dpr_1.7999999523162842/f_auto,q_auto/v1738840155/Optum/Optum.png?_i=AA" alt="Optum" style="height:60px;width:auto;filter:grayscale(100%);opacity:.7;transition:.3s" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='.7'">
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="nav-logo" style="margin-bottom:0"><div class="nav-logo-icon" style="width:34px;height:34px">🩸</div><span class="nav-logo-text" style="font-size:16px">my<span>Onsite</span> Healthcare</span></div>
-      <p>Bringing certified phlebotomy and mobile lab services directly to patients, providers, and researchers across 7 states.</p>
-      <div class="footer-contact"><a href="tel:9412710701">📞 (941) 271-0701</a><p>🖨️ Fax: (877) 471-1327</p></div>
-    </div>
-    <div class="footer-col"><h4>Services</h4><a href="index.html#services">Mobile Phlebotomy</a><a href="clinical-trials.html">Clinical Trials</a><a href="index.html#services">Legal Services</a><a href="index.html#services">Corporate Wellness</a><a href="index.html#services">Event Services</a></div>
-    <div class="footer-col"><h4>Coverage</h4><a href="mobile-phlebotomy-california.html">California</a><a href="mobile-phlebotomy-florida.html">Florida</a><a href="mobile-phlebotomy-new-york.html">New York</a><a href="mobile-phlebotomy-new-jersey.html">New Jersey</a><a href="mobile-phlebotomy-connecticut.html">Connecticut</a><a href="mobile-phlebotomy-massachusetts.html">Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html">New Hampshire</a></div>
-    <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="clinical-trials.html">Clinical Trials</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
+<!-- CTA -->
+<section style="background:var(--grad);padding:70px 20px;text-align:center;color:#fff">
+  <div style="max-width:700px;margin:0 auto">
+    <h2 style="font-size:clamp(28px,4vw,42px);font-weight:900;margin-bottom:20px">Ready to Experience Healthcare at Your Doorstep?</h2>
+    <p style="font-size:18px;opacity:.92;margin-bottom:36px">Join over 50,000 patients who trust myOnsite Healthcare for convenient, professional lab services.</p>
+    <a href="contact.html" style="display:inline-block;background:#fff;color:var(--blue);font-weight:800;font-size:17px;padding:16px 48px;border-radius:50px;box-shadow:0 4px 24px rgba(0,0,0,.15);transition:.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Schedule a Visit</a>
+    &nbsp;&nbsp;
+    <a href="tel:+18885669990" style="display:inline-block;background:var(--yellow);color:#232020;font-weight:800;font-size:17px;padding:16px 48px;border-radius:50px;transition:.2s;margin-top:12px" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'"><i class="fas fa-phone"></i> Call Us Now</a>
   </div>
-  <div class="footer-bottom"><p>© 2026 myOnsite Healthcare. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">HIPAA Notice</a><span class="hipaa-badge">🔒 HIPAA Compliant</span></div></div>
+</section>
+
+<!-- Footer -->
+<footer style="background:#1a2332;color:#ccc;padding:60px 20px 30px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px">
+      <div>
+        <img src="https://res.cloudinary.com/dqcxziqwp/images/v1754467289/final-logo-size-1/final-logo-size-1.png?_i=AA" alt="myOnsite Healthcare" style="height:48px;margin-bottom:20px;filter:brightness(0) invert(1)">
+        <p style="line-height:1.8;color:#aaa;max-width:280px">Bringing professional laboratory and clinical trial services directly to patients across 7 states.</p>
+        <div style="margin-top:20px;display:flex;gap:12px">
+          <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:.2s" onmouseover="this.style.background='var(--blue)'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:.2s" onmouseover="this.style.background='var(--blue)'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:.2s" onmouseover="this.style.background='var(--blue)'" onmouseout="this.style.background='rgba(255,255,255,.1)'"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:16px;font-weight:800;margin-bottom:20px">Services</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li><a href="index.html#services" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">Home Blood Draws</a></li>
+          <li><a href="clinical-trials.html" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">Clinical Trials</a></li>
+          <li><a href="index.html#services" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">Anti-Coagulation</a></li>
+          <li><a href="index.html#services" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">Event Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:16px;font-weight:800;margin-bottom:20px">Company</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li><a href="about.html" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">About Us</a></li>
+          <li><a href="careers.html" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">Careers</a></li>
+          <li><a href="blog.html" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">Blog</a></li>
+          <li><a href="faq.html" style="color:#aaa;transition:.2s;font-size:14px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:16px;font-weight:800;margin-bottom:20px">Contact</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#aaa"><i class="fas fa-phone" style="color:var(--teal);margin-top:2px"></i><a href="tel:+18885669990" style="color:#aaa" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#aaa'">1 (888) 566-9990</a></li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#aaa"><i class="fas fa-fax" style="color:var(--teal);margin-top:2px"></i>Fax: (949) 565-4370</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#aaa"><i class="fas fa-map-marker-alt" style="color:var(--teal);margin-top:2px"></i>Serving: CA, NV, AZ, TX, FL, NY, WA</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:#888">
+      <span>© 2024 myOnsite Healthcare. All rights reserved.</span>
+      <span><a href="#" style="color:#888;margin-left:16px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#888'">Privacy Policy</a><a href="#" style="color:#888;margin-left:16px" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='#888'">Terms of Service</a></span>
+    </div>
+  </div>
 </footer>
-<script src="assets/script.js"></script>
+
+<script>
+document.querySelector('.hamburger').addEventListener('click',()=>{
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+</script>
 </body>
 </html>

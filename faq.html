@@ -1,403 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="assets/styles.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/tailwind.min.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | myOnsite Healthcare – Mobile Phlebotomy Questions Answered</title>
+<meta name="description" content="Frequently asked questions about myOnsite Healthcare's mobile phlebotomy, home blood draw, and clinical trial services. Serving 7 states including California, Nevada, Arizona and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+:root{--blue:#2CA5F3;--teal:#34CFD1;--yellow:#FFC100;--body:#232020;--bg:#F7F8FA;--grad:linear-gradient(90deg,#2CA5F3 0%,#34CFD1 100%)}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Nunito',sans-serif;color:var(--body);background:#fff}a{text-decoration:none;color:inherit}
+.top-bar{background:var(--grad);color:#fff;font-size:13px;padding:8px 0}
+.top-bar .inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.top-bar a{color:#fff;margin-left:16px}
+.site-nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:999}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo img{height:52px}
+.nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+.nav-links a{font-size:14px;font-weight:700;color:var(--body);padding:8px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--grad);color:#fff !important;border-radius:50px !important;padding:10px 22px !important}
+.hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer}
+@media(max-width:1024px){.nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:#fff;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.12)}.nav-links.open{display:flex}.hamburger{display:block}}
+.float-contact{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1000;background:var(--grad);color:#fff;writing-mode:vertical-rl;padding:18px 10px;font-size:13px;font-weight:700;border-radius:8px 0 0 8px;letter-spacing:1px;box-shadow:-2px 2px 10px rgba(0,0,0,.15)}
+.page-hero{background:var(--grad);position:relative;overflow:hidden;padding:80px 20px 60px;text-align:center;color:#fff}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('https://myonsitehealthcare.com/wp-content/themes/Divi_Child/img/patten_dots.png') repeat;opacity:.12}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;position:relative;margin-bottom:16px}
+.page-hero p{font-size:18px;opacity:.92;max-width:600px;margin:0 auto;position:relative}
+.breadcrumb{position:relative;margin-top:20px;font-size:14px;opacity:.85}.breadcrumb a{color:#fff;font-weight:600}.breadcrumb span{margin:0 8px}
+/* FAQ Accordion */
+.faq-item{border:2px solid #e8eaed;border-radius:14px;margin-bottom:16px;overflow:hidden;transition:.3s}
+.faq-item.open{border-color:var(--blue);box-shadow:0 4px 20px rgba(44,165,243,.12)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;font-weight:800;font-size:17px;gap:16px;background:#fff}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{width:32px;height:32px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;transition:.3s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 28px 24px;color:#555;line-height:1.8;font-size:16px}
+.faq-item.open .faq-a{display:block}
+.faq-cat{display:inline-block;background:var(--grad);color:#fff;font-size:12px;font-weight:800;padding:4px 14px;border-radius:50px;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px}
+</style>
 </head>
-<body class="bg-white text-gray-900">
-<header id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
-      <span class="nav-logo-text">my<span>Onsite</span> Healthcare</span>
-    </a>
-    <nav class="nav-links">
-      <div class="nav-item"><button class="nav-link">Services ▾</button><div class="dropdown-menu"><a href="index.html#services" class="dropdown-link">🏠 Home Blood Draw</a><a href="clinical-trials.html" class="dropdown-link">🔬 Clinical Trials</a><a href="index.html#services" class="dropdown-link">⚖️ Legal Services</a><a href="index.html#services" class="dropdown-link">🏢 Corporate Wellness</a></div></div>
-      <div class="nav-item"><button class="nav-link">Coverage ▾</button><div class="dropdown-menu"><a href="mobile-phlebotomy-california.html" class="dropdown-link">🌴 California</a><a href="mobile-phlebotomy-florida.html" class="dropdown-link">☀️ Florida</a><a href="mobile-phlebotomy-new-york.html" class="dropdown-link">🍎 New York</a><a href="mobile-phlebotomy-new-jersey.html" class="dropdown-link">🗽 New Jersey</a><a href="mobile-phlebotomy-connecticut.html" class="dropdown-link">🏛 Connecticut</a><a href="mobile-phlebotomy-massachusetts.html" class="dropdown-link">🦞 Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html" class="dropdown-link">⛰ New Hampshire</a></div></div>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-    </nav>
-    <a href="tel:9412710701" class="nav-cta">Book a Draw →</a>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#services">Services</a>
-    <a href="index.html#coverage">Coverage</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="tel:9412710701" class="mobile-cta">📞 Book a Draw — (941) 271-0701</a>
-  </div>
-</header>
-
-<!-- Hero Section -->
-<section style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; padding: 80px 40px; text-align: center; position: relative; overflow: hidden;">
-  <div style="position: absolute; top: 0; right: 0; opacity: 0.1; font-size: 300px; line-height: 0.8;">❓</div>
-  <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 20px; position: relative; z-index: 2;">Frequently Asked Questions</h1>
-  <p style="font-size: 18px; margin-bottom: 40px; position: relative; z-index: 2; opacity: 0.9;">Find answers to common questions about our services, scheduling, and more.</p>
-  
-  <div style="max-width: 500px; margin: 0 auto; position: relative; z-index: 2;">
-    <div style="display: flex; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; border: 1px solid rgba(255,255,255,0.2);">
-      <input type="text" placeholder="Search FAQs..." style="flex: 1; background: transparent; border: none; padding: 12px 16px; color: white; font-size: 14px; outline: none;" style="color: rgba(255,255,255,0.7);"/>
-      <button style="padding: 12px 20px; background: rgba(255,255,255,0.2); border: none; border-radius: 6px; cursor: pointer; color: white; font-weight: 600;">🔍</button>
-    </div>
-  </div>
+<body>
+<div class="top-bar"><div class="inner"><span><i class="fas fa-phone"></i> <a href="tel:+18885669990">1 (888) 566-9990</a> &nbsp;|&nbsp; Fax: (949) 565-4370</span><span><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></span></div></div>
+<nav class="site-nav"><div class="nav-inner">
+  <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dqcxziqwp/images/v1754467289/final-logo-size-1/final-logo-size-1.png?_i=AA" alt="myOnsite Healthcare"></a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="clinical-trials.html">Clinical Trials</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Careers</a></li><li><a href="faq.html" class="active">FAQ</a></li><li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</div></nav>
+<a href="contact.html" class="float-contact">Contact Us</a>
+<section class="page-hero">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know about our mobile lab and clinical trial services.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>FAQ</div>
 </section>
 
-<!-- Before Your Draw Section -->
-<section style="padding: 60px 40px;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: #1e293b; padding-bottom: 15px; border-bottom: 3px solid #0ea5e9;">📋 Before Your Draw</h2>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Do I need to fast before my blood draw?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>This depends on the specific lab tests you're having. Many tests don't require fasting, but some do (typically 8-12 hours). Your doctor or our team will let you know beforehand if fasting is necessary for your specific tests.</p>
+<section style="padding:80px 20px;background:#fff">
+  <div style="max-width:900px;margin:0 auto">
+
+    <div style="margin-bottom:56px">
+      <span class="faq-cat">General</span>
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggle(this)">What is myOnsite Healthcare?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">myOnsite Healthcare is a mobile phlebotomy and clinical laboratory services company that sends certified healthcare professionals directly to your home, office, assisted living facility, or wherever you are located. We eliminate the need to travel to a lab or hospital for blood draws and other specimen collections.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">What states do you serve?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">We currently serve patients in California, Nevada, Arizona, Texas, Florida, New York, and Washington. We are continuously expanding — contact us to check availability in your specific city or zip code.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">How do I schedule an appointment?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">You can schedule an appointment by calling us at 1 (888) 566-9990, emailing us at info@myonsitehealthcare.com, or filling out the contact form on our website. We offer same-day and next-day appointments in most service areas, Monday through Saturday.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">What are your hours of operation?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Our mobile phlebotomists are available Monday–Friday from 7:00 AM to 7:00 PM and Saturday from 8:00 AM to 4:00 PM (local time). Our office support team is available during these same hours to assist with scheduling, billing questions, and more.</div>
       </div>
     </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What should I do before the phlebotomist arrives?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Stay hydrated, eat a light meal if not fasting, and have your doctor's order or insurance information ready. Wear comfortable, loose-fitting clothing with sleeves that roll up easily. Try to relax and avoid stressful situations before your appointment, as stress can affect some test results.</p>
+
+    <div style="margin-bottom:56px">
+      <span class="faq-cat">Services</span>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">What types of lab tests can you collect?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">We collect specimens for virtually all standard laboratory tests ordered by your physician, including complete blood count (CBC), comprehensive metabolic panels (CMP), lipid panels, HbA1c, thyroid panels, coagulation studies (INR/PT/PTT), hormone panels, allergy testing, infectious disease panels, and many more. Our phlebotomists follow strict chain-of-custody protocols to ensure accurate results.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Do you handle anti-coagulation monitoring?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Yes! We have a dedicated anti-coagulation management program. Patients on warfarin, heparin, or other blood thinners can have their INR/PT levels monitored from home. Results are sent directly to the ordering physician for dosage adjustments, avoiding unnecessary clinic visits.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Can you support clinical trials?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Absolutely. We are a preferred mobile site management organization (mSMO) for clinical research. We handle Phase I–IV trial specimen collection, kit preparation, temperature-controlled specimen handling, chain-of-custody documentation, and courier coordination to central labs — all following strict ICH-GCP and sponsor protocols.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Do you offer corporate wellness and event services?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Yes. We partner with corporations, senior living communities, health fairs, and community organizations to provide on-site health screenings, flu shot programs, COVID testing, wellness panel blood draws, and other preventive health services. Contact us to get a custom quote for your event.</div>
       </div>
     </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What if I'm nervous about needles?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Our certified phlebotomists are compassionate and experienced in working with anxious patients. Let them know about your concerns when you book—they can help you relax and make the experience as comfortable as possible. Deep breathing, looking away, or distraction techniques can help too.</p>
+
+    <div style="margin-bottom:56px">
+      <span class="faq-cat">Insurance & Billing</span>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Do you accept insurance?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Yes, we accept most major insurance plans including Medicare, Medi-Cal, Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Humana, and many others. Our billing team will verify your benefits before your appointment. Please have your insurance card and a copy of your lab order ready.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Is there a fee for the home visit?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">A mobile convenience fee may apply depending on your insurance plan and location. Many insurance plans cover the mobile draw fee entirely. We will transparently communicate any out-of-pocket costs before scheduling your appointment. We also offer self-pay options with competitive pricing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">How will I receive my lab results?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Lab results are sent directly to your ordering physician, typically within 24–48 hours depending on the test. Your doctor will then contact you to discuss results. For some routine tests, we can also provide a copy of results directly to you upon request, subject to your physician's authorization.</div>
       </div>
     </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>How long does a typical blood draw appointment take?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Most appointments take 10-15 minutes. This includes check-in, the draw itself (usually 3-5 minutes), and brief aftercare instructions. Our phlebotomists are highly skilled and efficient, ensuring you're in and out quickly.</p>
+
+    <div style="margin-bottom:56px">
+      <span class="faq-cat">Safety & Qualifications</span>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Are your phlebotomists certified?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">All of our mobile phlebotomists are certified by nationally recognized organizations (NPA, ASCP, or AMT), have passed comprehensive background checks, and undergo regular skills validation. They follow OSHA bloodborne pathogen standards and maintain up-to-date healthcare certifications including CPR/BLS.</div>
       </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What should I bring to my appointment?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Bring a valid photo ID, your insurance card (if you have one), and your doctor's lab order. You can also bring a light snack or beverage to enjoy after your draw. Have your phone ready for any last-minute confirmation calls.</p>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">How do you ensure specimen quality and integrity?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">We follow strict pre-analytical protocols including proper patient identification with two identifiers, correct tube selection and order of draw, temperature-controlled transport with validated cold-chain management, and time-sensitive sample handling. All specimens are tracked from collection to delivery at the reference laboratory.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)">Is it safe to have a blood draw at home?<span class="faq-icon"><i class="fas fa-plus"></i></span></div>
+        <div class="faq-a">Yes, absolutely. Home blood draws by certified phlebotomists are extremely safe. Our team brings all necessary supplies including proper sharps disposal containers, PPE, sterile needles, and collection tubes. After collection, all biohazardous waste is properly contained and disposed of according to state and federal regulations.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Insurance & Payment Section -->
-<section style="padding: 60px 40px; background: #f8fafc;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: #1e293b; padding-bottom: 15px; border-bottom: 3px solid #10b981;">💳 Insurance & Payment</h2>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Do you accept insurance?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Yes! We accept most major insurance plans including Medicare, Medicaid, and private insurance. We'll verify your coverage at no charge when you book your appointment.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What if I don't have insurance?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>We offer affordable self-pay options with competitive pricing. Call us at (941) 271-0701 to discuss cash pricing for your specific tests. We also offer payment plans to make care accessible to everyone.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Am I responsible for any out-of-pocket costs?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>You may have a copay, coinsurance, or deductible depending on your insurance plan. We'll tell you the estimated amount before your appointment so there are no surprises.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>How will I be billed?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>We bill your insurance directly. For self-pay patients, we offer several billing options including credit card, ACH transfer, or payment plans. You can also pay at the time of service.</p>
-      </div>
-    </div>
+<!-- CTA -->
+<section style="background:var(--grad);padding:70px 20px;text-align:center;color:#fff">
+  <div style="max-width:700px;margin:0 auto">
+    <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:16px">Still Have Questions?</h2>
+    <p style="font-size:18px;opacity:.92;margin-bottom:36px">Our team is ready to help. Call us or send a message and we'll respond within 1 hour.</p>
+    <a href="tel:+18885669990" style="display:inline-block;background:#fff;color:var(--blue);font-weight:800;font-size:17px;padding:16px 40px;border-radius:50px;margin-right:12px"><i class="fas fa-phone"></i> 1 (888) 566-9990</a>
+    <a href="contact.html" style="display:inline-block;background:var(--yellow);color:#232020;font-weight:800;font-size:17px;padding:16px 40px;border-radius:50px;margin-top:12px">Send a Message</a>
   </div>
 </section>
 
-<!-- Scheduling Section -->
-<section style="padding: 60px 40px;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: #1e293b; padding-bottom: 15px; border-bottom: 3px solid #f59e0b;">🗓️ Scheduling</h2>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>How do I book an appointment?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Simply call us at (941) 271-0701, and our friendly team will find a time that works for you. We typically have same-day or next-day appointments available. You can also book online through our website's scheduling system.</p>
+<!-- Footer -->
+<footer style="background:#1a2332;color:#ccc;padding:60px 20px 30px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px">
+      <div>
+        <img src="https://res.cloudinary.com/dqcxziqwp/images/v1754467289/final-logo-size-1/final-logo-size-1.png?_i=AA" alt="myOnsite Healthcare" style="height:48px;margin-bottom:16px;filter:brightness(0) invert(1)">
+        <p style="line-height:1.8;color:#aaa;max-width:280px;font-size:14px">Bringing professional laboratory and clinical trial services directly to patients across 7 states.</p>
       </div>
+      <div><h4 style="color:#fff;font-size:15px;font-weight:800;margin-bottom:16px">Services</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px"><li><a href="index.html" style="color:#aaa;font-size:14px">Home Blood Draws</a></li><li><a href="clinical-trials.html" style="color:#aaa;font-size:14px">Clinical Trials</a></li><li><a href="index.html" style="color:#aaa;font-size:14px">Anti-Coagulation</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:15px;font-weight:800;margin-bottom:16px">Company</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px"><li><a href="about.html" style="color:#aaa;font-size:14px">About Us</a></li><li><a href="careers.html" style="color:#aaa;font-size:14px">Careers</a></li><li><a href="blog.html" style="color:#aaa;font-size:14px">Blog</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:15px;font-weight:800;margin-bottom:16px">Contact</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px"><li style="font-size:14px;color:#aaa"><i class="fas fa-phone" style="color:var(--teal);margin-right:8px"></i><a href="tel:+18885669990" style="color:#aaa">1 (888) 566-9990</a></li><li style="font-size:14px;color:#aaa"><i class="fas fa-fax" style="color:var(--teal);margin-right:8px"></i>Fax: (949) 565-4370</li></ul></div>
     </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What are your hours of operation?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>We're open Monday through Sunday, 6:00 AM to 8:00 PM. This gives you flexibility to schedule appointments that fit your busy lifestyle, whether early morning, evening, or weekend appointments.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Can I reschedule or cancel my appointment?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Absolutely. You can reschedule or cancel with at least 24 hours notice by calling us at (941) 271-0701 or using your online account. No penalties or cancellation fees for advance notice.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>How quickly can I get an appointment?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>We typically have same-day appointments available in most areas. If you need urgent lab work, call us immediately at (941) 271-0701 and we'll do our best to accommodate you quickly.</p>
-      </div>
-    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:20px;text-align:center;font-size:13px;color:#888">© 2024 myOnsite Healthcare. All rights reserved.</div>
   </div>
-</section>
-
-<!-- Our Phlebotomists Section -->
-<section style="padding: 60px 40px; background: #f8fafc;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: #1e293b; padding-bottom: 15px; border-bottom: 3px solid #8b5cf6;">👩‍⚕️ Our Phlebotomists</h2>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Are your phlebotomists certified?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Yes, all of our phlebotomists are certified and licensed. We maintain NAACLS certification and our labs are CLIA-certified, ensuring the highest standards of care and accuracy.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Do phlebotomists undergo background checks?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Absolutely. All our team members pass comprehensive background checks and have maintained clean records. Your safety and trust are our top priorities.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What safety precautions do your phlebotomists follow?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Our phlebotomists follow strict infection control protocols, including wearing gloves, using sterile needles, and properly disposing of all materials. All equipment is sanitized between patients.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Do your phlebotomists work alone?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Yes, our phlebotomists are well-trained professionals who work independently. They're equipped to handle any situation professionally and compassionately, and are available 24/7 for support via phone if needed.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Results & Privacy Section -->
-<section style="padding: 60px 40px;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: #1e293b; padding-bottom: 15px; border-bottom: 3px solid #0ea5e9;">🔒 Results & Privacy</h2>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>When will I receive my lab results?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Most results are available within 24-48 hours. Some tests may take longer depending on complexity. You'll receive results through your patient portal, email, or phone, depending on your preference.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>How are my results delivered?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Results are delivered securely through encrypted patient portals, by email, or by phone. We use HIPAA-compliant systems to protect your privacy. You can also request results be sent to your healthcare provider.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Is myOnsite Healthcare HIPAA compliant?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Yes, we are fully HIPAA compliant. Your medical information is protected under strict federal privacy regulations. We encrypt all data, limit access to authorized personnel only, and maintain comprehensive security protocols.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Who can access my lab results?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Only you, your authorized healthcare providers, and authorized laboratory personnel can access your results. We never share your information without explicit consent, except as required by law.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What information do you collect from me?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: #f8fafc; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>We collect basic demographic information, insurance details, and medical history relevant to your lab tests. All information is handled with strict confidentiality and stored securely.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Clinical Trials Section -->
-<section style="padding: 60px 40px; background: #f8fafc;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 30px; color: #1e293b; padding-bottom: 15px; border-bottom: 3px solid #06b6d4;">🔬 Clinical Trials</h2>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>How does myOnsite partner with clinical trials?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>We provide phlebotomy services for clinical research studies, including participant screening, blood collection, sample processing, and secure documentation. Our team is experienced in managing the precise protocols that trials require.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Can I participate in a clinical trial?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Eligibility depends on the specific trial. Contact us at (941) 271-0701 or visit our clinical trials page to learn about current opportunities and enrollment requirements in your area.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>What are the benefits of participating in a trial?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>Participants may gain access to new treatments, receive free lab work and medical monitoring, and contribute to scientific advancement. Some trials offer compensation for time and travel.</p>
-      </div>
-    </div>
-    
-    <div style="margin-bottom: 25px;">
-      <button class="faq-btn" style="width: 100%; padding: 18px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: left; font-size: 16px; font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s;">
-        <span>Is participation in a clinical trial safe?</span>
-        <span class="faq-arrow" style="font-size: 18px;">+</span>
-      </button>
-      <div class="faq-body" style="display: none; padding: 20px; background: white; border-radius: 8px; margin-top: 8px; font-size: 14px; color: #475569; line-height: 1.6;">
-        <p>All clinical trials are conducted under strict ethical oversight and regulatory approval. Participants receive informed consent documentation and can withdraw at any time without penalty.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section style="padding: 80px 40px; background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%); color: white; text-align: center;">
-  <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: white;">Still Have Questions?</h2>
-  <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">Our friendly team is ready to help. Reach out anytime.</p>
-  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-    <a href="tel:9412710701" style="display: inline-block; padding: 14px 32px; background: white; color: #0ea5e9; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px;">📞 Call Us</a>
-    <a href="contact.html" style="display: inline-block; padding: 14px 32px; background: rgba(255,255,255,0.2); color: white; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; border: 2px solid white;">📧 Contact Form</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="nav-logo" style="margin-bottom:0"><div class="nav-logo-icon" style="width:34px;height:34px">🩸</div><span class="nav-logo-text" style="font-size:16px">my<span>Onsite</span> Healthcare</span></div>
-      <p>Bringing certified phlebotomy and mobile lab services directly to patients, providers, and researchers across 7 states.</p>
-      <div class="footer-contact"><a href="tel:9412710701">📞 (941) 271-0701</a><p>🖨️ Fax: (877) 471-1327</p></div>
-    </div>
-    <div class="footer-col"><h4>Services</h4><a href="index.html#services">Mobile Phlebotomy</a><a href="clinical-trials.html">Clinical Trials</a><a href="index.html#services">Legal Services</a><a href="index.html#services">Corporate Wellness</a><a href="index.html#services">Event Services</a></div>
-    <div class="footer-col"><h4>Coverage</h4><a href="mobile-phlebotomy-california.html">California</a><a href="mobile-phlebotomy-florida.html">Florida</a><a href="mobile-phlebotomy-new-york.html">New York</a><a href="mobile-phlebotomy-new-jersey.html">New Jersey</a><a href="mobile-phlebotomy-connecticut.html">Connecticut</a><a href="mobile-phlebotomy-massachusetts.html">Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html">New Hampshire</a></div>
-    <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="clinical-trials.html">Clinical Trials</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
-  </div>
-  <div class="footer-bottom"><p>© 2026 myOnsite Healthcare. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">HIPAA Notice</a><span class="hipaa-badge">🔒 HIPAA Compliant</span></div></div>
 </footer>
 
-<script src="assets/script.js"></script>
 <script>
-// FAQ Accordion Functionality
-document.querySelectorAll('.faq-btn').forEach(button => {
-  button.addEventListener('click', function() {
-    const body = this.nextElementSibling;
-    const arrow = this.querySelector('.faq-arrow');
-    
-    // Close other open FAQs
-    document.querySelectorAll('.faq-body').forEach(otherBody => {
-      if (otherBody !== body) {
-        otherBody.style.display = 'none';
-        otherBody.previousElementSibling.querySelector('.faq-arrow').textContent = '+';
-      }
-    });
-    
-    // Toggle current FAQ
-    if (body.style.display === 'none' || body.style.display === '') {
-      body.style.display = 'block';
-      arrow.textContent = '−';
-    } else {
-      body.style.display = 'none';
-      arrow.textContent = '+';
-    }
-  });
-});
+function toggle(el){
+  const item=el.parentElement;
+  document.querySelectorAll('.faq-item.open').forEach(i=>{if(i!==item){i.classList.remove('open')}});
+  item.classList.toggle('open');
+}
 </script>
 </body>
 </html>
