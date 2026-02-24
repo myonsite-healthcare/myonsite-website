@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myOnsite Healthcare | Mobile Phlebotomy & At-Home Lab Testing</title>
+  <meta name="description" content="myOnsite Healthcare brings certified phlebotomists directly to your home, office, or facility across CA, CT, FL, MA, NH, NJ & NY. Book a blood draw today — no clinic visit needed." />
+  <meta property="og:title" content="myOnsite Healthcare | Mobile Phlebotomy & At-Home Lab Testing" />
+  <meta property="og:description" content="Certified phlebotomists come to you. No waiting rooms. HIPAA compliant. Serving CA, CT, FL, MA, NH, NJ & NY." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://myonsitehealthcare.com/" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','sans-serif'], display: ['Sora','sans-serif'] },
+          colors: {
+            navy: { 50:'#f0f4ff',100:'#e0e9ff',500:'#3b5fc0',600:'#1e40af',700:'#1a337a',800:'#0f2156',900:'#080f2e' },
+            teal: { 400:'#22d3ee',500:'#06b6d4',600:'#0891b2' },
+          },
+          keyframes: { fadeUp: { '0%':{opacity:'0',transform:'translateY(20px)'},'100%':{opacity:'1',transform:'translateY(0)'} } },
+          animation: { 'fade-up':'fadeUp 0.6s ease-out forwards' }
+        }
+      }
+    }
+  </script>
+  <style>
+    *{scroll-behavior:smooth}
+    .gradient-hero{background:linear-gradient(135deg,#080f2e 0%,#0f2156 40%,#1a337a 70%,#0891b2 100%)}
+    .glass{background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.15)}
+    .glass-dark{background:rgba(8,15,46,0.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1)}
+    .nav-link{position:relative}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:#22d3ee;transition:width 0.3s}
+    .nav-link:hover::after{width:100%}
+    .service-card{transition:all 0.3s ease}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(8,15,46,0.15)}
+    .stat-number{background:linear-gradient(135deg,#22d3ee,#3b5fc0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .cta-glow{box-shadow:0 0 30px rgba(34,211,238,0.35)}
+    .section-tag{background:linear-gradient(135deg,#e0e9ff,#f0f4ff);color:#1e40af}
+    .blog-card{transition:all 0.3s ease}
+    .blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.1)}
+    .mobile-menu{display:none}
+    .mobile-menu.open{display:flex}
+    .dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:#0f2156;border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:8px;z-index:100;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+    .dropdown-parent:hover .dropdown{display:block}
+    @media(max-width:768px){.desktop-nav{display:none}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalBusiness","name":"myOnsite Healthcare","url":"https://myonsitehealthcare.com","telephone":"+1-941-271-0701","description":"Mobile phlebotomy and at-home lab testing services.","areaServed":["California","Connecticut","Florida","Massachusetts","New Hampshire","New Jersey","New York"],"medicalSpecialty":"Phlebotomy","openingHours":"Mo-Su 06:00-20:00","contactPoint":{"@type":"ContactPoint","telephone":"+1-941-271-0701","contactType":"customer service"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does mobile phlebotomy work?","acceptedAnswer":{"@type":"Answer","text":"A certified phlebotomist visits your home, office, or facility at a scheduled time to collect your blood sample. Results go to your physician within 24-48 hours."}},{"@type":"Question","name":"Is at-home blood draw covered by insurance?","acceptedAnswer":{"@type":"Answer","text":"Many major insurance plans cover mobile phlebotomy. We verify your benefits before your appointment at no charge."}},{"@type":"Question","name":"How do I prepare for a home blood draw?","acceptedAnswer":{"@type":"Answer","text":"Fast 8-12 hours prior, stay hydrated with water, wear loose clothing with easy arm access."}},{"@type":"Question","name":"Which states do you serve?","acceptedAnswer":{"@type":"Answer","text":"California, Connecticut, Florida, Massachusetts, New Hampshire, New Jersey, and New York."}}]}
+  </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+
+<!-- NAVBAR -->
+<header id="navbar" style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,15,46,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:64px">
+      <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+        <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <span style="font-family:Sora,sans-serif;font-weight:700;color:white;font-size:18px">my<span style="color:#22d3ee">Onsite</span> Healthcare</span>
+      </a>
+      <nav class="desktop-nav" style="display:flex;align-items:center;gap:28px">
+        <div class="dropdown-parent" style="position:relative">
+          <button style="background:none;border:none;color:#d1d5db;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:4px">Services ▾</button>
+          <div class="dropdown">
+            <a href="#services" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px;transition:all 0.2s" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🏠 Home Blood Draw</a>
+            <a href="#clinical-trials" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px;transition:all 0.2s" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🔬 Clinical Trials</a>
+            <a href="#services" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px;transition:all 0.2s" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">⚖️ Legal Services</a>
+            <a href="#services" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px;transition:all 0.2s" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🏢 Corporate Wellness</a>
+          </div>
+        </div>
+        <div class="dropdown-parent" style="position:relative">
+          <button style="background:none;border:none;color:#d1d5db;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:4px">Coverage ▾</button>
+          <div class="dropdown">
+            <a href="mobile-phlebotomy-california.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🌴 California</a>
+            <a href="mobile-phlebotomy-florida.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">☀️ Florida</a>
+            <a href="mobile-phlebotomy-new-york.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🍎 New York</a>
+            <a href="mobile-phlebotomy-new-jersey.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🗽 New Jersey</a>
+            <a href="mobile-phlebotomy-connecticut.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🏛 Connecticut</a>
+            <a href="mobile-phlebotomy-massachusetts.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">🦞 Massachusetts</a>
+            <a href="mobile-phlebotomy-new-hampshire.html" style="display:block;padding:8px 12px;color:#d1d5db;text-decoration:none;font-size:13px;border-radius:8px" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='white'" onmouseout="this.style.background='';this.style.color='#d1d5db'">⛰ New Hampshire</a>
+          </div>
+        </div>
+        <a href="#blog" class="nav-link" style="color:#d1d5db;text-decoration:none;font-size:14px;font-weight:500">Blog</a>
+        <a href="#about" class="nav-link" style="color:#d1d5db;text-decoration:none;font-size:14px;font-weight:500">About</a>
+        <a href="tel:9412710701" style="color:#d1d5db;text-decoration:none;font-size:14px;font-weight:500;display:flex;align-items:center;gap:6px">📞 (941) 271-0701</a>
+      </nav>
+      <a href="tel:9412710701" class="cta-glow" style="display:none;align-items:center;gap:8px;padding:10px 20px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);color:white;text-decoration:none;font-size:14px;font-weight:600;transition:all 0.2s" id="navCTA">Book a Draw →</a>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" style="display:none;background:none;border:none;color:white;cursor:pointer" id="hamburger">☰</button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" style="flex-direction:column;padding:16px 24px 20px;gap:8px;background:rgba(8,15,46,0.99)">
+    <a href="#services" style="color:#d1d5db;text-decoration:none;font-size:14px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Services</a>
+    <a href="#coverage" style="color:#d1d5db;text-decoration:none;font-size:14px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Coverage Areas</a>
+    <a href="#blog" style="color:#d1d5db;text-decoration:none;font-size:14px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.08)">Blog</a>
+    <a href="tel:9412710701" style="color:#22d3ee;text-decoration:none;font-size:14px;font-weight:600;padding:8px 0">📞 (941) 271-0701</a>
+    <a href="tel:9412710701" style="display:block;text-align:center;padding:12px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);color:white;text-decoration:none;font-weight:600;font-size:14px;margin-top:8px">Book a Draw →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="gradient-hero" style="min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
+    <div style="position:absolute;top:10%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,0.12),transparent)"></div>
+    <div style="position:absolute;bottom:-10%;left:-5%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(59,95,192,0.15),transparent)"></div>
+    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.04" xmlns="http://www.w3.org/2000/svg">
+      <defs><pattern id="g" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0L0 0 0 60" fill="none" stroke="white" stroke-width="1"/></pattern></defs>
+      <rect width="100%" height="100%" fill="url(#g)"/>
+    </svg>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:80px 24px;position:relative;z-index:1;width:100%">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+      <div>
+        <div class="glass" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:100px;margin-bottom:24px">
+          <span style="width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite"></span>
+          <span style="color:#22d3ee;font-size:13px;font-weight:500">Now serving 7 states — expanding 2026</span>
+        </div>
+        <h1 style="font-family:Sora,sans-serif;font-size:clamp(36px,5vw,64px);font-weight:800;color:white;line-height:1.1;margin-bottom:24px">
+          Clinical-grade<br/>
+          <span style="background:linear-gradient(135deg,#22d3ee,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">lab testing</span><br/>
+          at your door
+        </h1>
+        <p style="color:#d1d5db;font-size:18px;line-height:1.7;margin-bottom:36px;max-width:480px">
+          Skip the waiting room. Our certified phlebotomists come to your home, office, or facility — the same precision as any hospital lab, with the comfort of your own space.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+          <a href="tel:9412710701" class="cta-glow" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:14px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);color:white;text-decoration:none;font-size:16px;font-weight:600;transition:all 0.2s">
+            📞 Book Your Appointment
+          </a>
+          <a href="#services" class="glass" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:14px;color:white;text-decoration:none;font-size:16px;font-weight:500">
+            Our Services →
+          </a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <div class="glass" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px"><span style="color:#4ade80">🔒</span><span style="color:#d1d5db;font-size:12px;font-weight:500">HIPAA Compliant</span></div>
+          <div class="glass" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px"><span>🏅</span><span style="color:#d1d5db;font-size:12px;font-weight:500">Certified Phlebotomists</span></div>
+          <div class="glass" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px"><span style="color:#fbbf24">⭐</span><span style="color:#d1d5db;font-size:12px;font-weight:500">4.9★ Rating</span></div>
+          <div class="glass" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px"><span>🛡️</span><span style="color:#d1d5db;font-size:12px;font-weight:500">Insurance Accepted</span></div>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div class="glass-dark" style="border-radius:24px;padding:32px">
+          <div style="text-align:center;margin-bottom:24px">
+            <div style="width:72px;height:72px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;background:rgba(34,211,238,0.1);border:2px solid rgba(34,211,238,0.25)">🩸</div>
+            <h3 style="font-family:Sora,sans-serif;color:white;font-weight:700;font-size:20px;margin-bottom:4px">Request a Draw</h3>
+            <p style="color:#9ca3af;font-size:13px">Fast · Simple · Secure</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px">
+              <p style="color:#9ca3af;font-size:11px;margin-bottom:4px">Service Type</p>
+              <p style="color:white;font-size:14px;font-weight:500">🏠 Home Blood Draw</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px">
+              <p style="color:#9ca3af;font-size:11px;margin-bottom:4px">Preferred Time</p>
+              <p style="color:white;font-size:14px;font-weight:500">📅 Tomorrow, 9:00 AM</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px">
+              <p style="color:#9ca3af;font-size:11px;margin-bottom:4px">Insurance Status</p>
+              <p style="color:#4ade80;font-size:14px;font-weight:500">✅ Coverage verified</p>
+            </div>
+          </div>
+          <a href="tel:9412710701" class="cta-glow" style="display:block;width:100%;padding:14px;text-align:center;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);color:white;text-decoration:none;font-weight:600;font-size:14px">
+            Confirm Appointment →
+          </a>
+          <p style="text-align:center;color:#6b7280;font-size:12px;margin-top:10px">Or call: (941) 271-0701</p>
+        </div>
+        <div style="position:absolute;top:-16px;right:-16px;background:rgba(8,15,46,0.92);border:1px solid rgba(34,211,238,0.3);border-radius:12px;padding:10px 16px">
+          <p style="color:#4ade80;font-size:12px;font-weight:600">✓ Same-day available</p>
+        </div>
+        <div style="position:absolute;bottom:-16px;left:-16px;background:rgba(8,15,46,0.92);border:1px solid rgba(59,95,192,0.3);border-radius:12px;padding:10px 16px">
+          <p style="color:#60a5fa;font-size:12px;font-weight:600">🔒 HIPAA Compliant Results</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section style="padding:48px 24px;background:white;border-bottom:1px solid #f3f4f6">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center">
+    <div><p class="stat-number" style="font-family:Sora,sans-serif;font-size:42px;font-weight:800">7</p><p style="color:#6b7280;font-size:14px;margin-top:4px;font-weight:500">States Served</p></div>
+    <div><p class="stat-number" style="font-family:Sora,sans-serif;font-size:42px;font-weight:800">50K+</p><p style="color:#6b7280;font-size:14px;margin-top:4px;font-weight:500">Patients Served</p></div>
+    <div><p class="stat-number" style="font-family:Sora,sans-serif;font-size:42px;font-weight:800">4.9★</p><p style="color:#6b7280;font-size:14px;margin-top:4px;font-weight:500">Patient Rating</p></div>
+    <div><p class="stat-number" style="font-family:Sora,sans-serif;font-size:42px;font-weight:800">24hr</p><p style="color:#6b7280;font-size:14px;margin-top:4px;font-weight:500">Result Turnaround</p></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="padding:80px 24px;background:#f9fafb">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="section-tag" style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px">Simple Process</span>
+      <h2 style="font-family:Sora,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:#080f2e;margin-bottom:16px">Lab quality. Zero hassle.</h2>
+      <p style="color:#6b7280;font-size:17px;max-width:520px;margin:0 auto">From booking to results in three effortless steps — all without leaving your front door.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div style="text-align:center;padding:32px 24px;background:white;border-radius:20px;border:1px solid #f3f4f6;position:relative">
+        <div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700">1</div>
+        <div style="font-size:48px;margin-bottom:20px">📋</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Book Your Draw</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7">Call us, request online, or have your physician send an order. We confirm insurance and schedule at your convenience.</p>
+      </div>
+      <div style="text-align:center;padding:32px 24px;background:white;border-radius:20px;border:1px solid #f3f4f6;position:relative">
+        <div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700">2</div>
+        <div style="font-size:48px;margin-bottom:20px">🩸</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">We Come to You</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7">A certified phlebotomist arrives at your home, office, or facility. Collection takes minutes — safe, sterile, and professional.</p>
+      </div>
+      <div style="text-align:center;padding:32px 24px;background:white;border-radius:20px;border:1px solid #f3f4f6;position:relative">
+        <div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700">3</div>
+        <div style="font-size:48px;margin-bottom:20px">📊</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Get Your Results</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7">Samples go to a CLIA-certified lab. Results are delivered to your physician within 24–48 hours — securely and compliantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding:80px 24px;background:white">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="section-tag" style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px">What We Do</span>
+      <h2 style="font-family:Sora,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:#080f2e;margin-bottom:16px">Comprehensive mobile health services</h2>
+      <p style="color:#6b7280;font-size:17px;max-width:560px;margin:0 auto">Built for patients, providers, legal professionals, and researchers who need precision diagnostics without the clinic visit.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div class="service-card" style="background:linear-gradient(135deg,#f8faff,#ffffff);border-radius:20px;padding:28px;border:1px solid #e8edf8;cursor:pointer">
+        <div style="font-size:40px;margin-bottom:20px">🏠</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Home Blood Draw</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:16px">A certified phlebotomist comes to your home at a time that works for you. Perfect for seniors, busy parents, or anyone avoiding clinic waits.</p>
+        <a href="tel:9412710701" style="color:#1e40af;font-size:13px;font-weight:600;text-decoration:none">Book now →</a>
+      </div>
+      <div class="service-card" style="background:linear-gradient(135deg,#f0fdf8,#ffffff);border-radius:20px;padding:28px;border:1px solid #d1fae5;cursor:pointer">
+        <div style="font-size:40px;margin-bottom:20px">🔬</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Clinical Trials Support</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:16px">We partner with research institutions to bring specimen collection directly to trial participants — expanding access and improving retention rates.</p>
+        <a href="#clinical-trials" style="color:#1e40af;font-size:13px;font-weight:600;text-decoration:none">Learn more →</a>
+      </div>
+      <div class="service-card" style="background:linear-gradient(135deg,#fdf4ff,#ffffff);border-radius:20px;padding:28px;border:1px solid #ede9fe;cursor:pointer">
+        <div style="font-size:40px;margin-bottom:20px">⚖️</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Legal & Attorney Services</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:16px">Court-admissible chain-of-custody specimen collection for personal injury, workers' comp, and legal matters — fast and fully documented.</p>
+        <a href="tel:9412710701" style="color:#1e40af;font-size:13px;font-weight:600;text-decoration:none">Get started →</a>
+      </div>
+      <div class="service-card" style="background:linear-gradient(135deg,#fffbeb,#ffffff);border-radius:20px;padding:28px;border:1px solid #fde68a;cursor:pointer">
+        <div style="font-size:40px;margin-bottom:20px">🏢</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Corporate Wellness</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:16px">On-site health screenings for your workforce. Executive physicals to full employee wellness programs — we come to your office.</p>
+        <a href="tel:9412710701" style="color:#1e40af;font-size:13px;font-weight:600;text-decoration:none">Request a quote →</a>
+      </div>
+      <div class="service-card" style="background:linear-gradient(135deg,#fff1f2,#ffffff);border-radius:20px;padding:28px;border:1px solid #fecdd3;cursor:pointer">
+        <div style="font-size:40px;margin-bottom:20px">♿</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Special Needs & Accessibility</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:16px">Specialized care for patients with mobility challenges, disabilities, or conditions requiring extra attention and accommodation.</p>
+        <a href="tel:9412710701" style="color:#1e40af;font-size:13px;font-weight:600;text-decoration:none">Learn more →</a>
+      </div>
+      <div class="service-card" style="background:linear-gradient(135deg,#f0fdf4,#ffffff);border-radius:20px;padding:28px;border:1px solid #bbf7d0;cursor:pointer">
+        <div style="font-size:40px;margin-bottom:20px">🎪</div>
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:#080f2e;margin-bottom:10px">Event & Health Fair Services</h3>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:16px">Full-scale mobile lab setup for health fairs, community events, and employer screenings. We handle logistics, staffing, and reporting.</p>
+        <a href="tel:9412710701" style="color:#1e40af;font-size:13px;font-weight:600;text-decoration:none">Plan your event →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLINICAL TRIALS -->
+<section id="clinical-trials" style="padding:80px 24px;background:linear-gradient(135deg,#080f2e,#0f2156);position:relative;overflow:hidden">
+  <div style="position:absolute;top:0;right:0;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,0.1),transparent);pointer-events:none"></div>
+  <div style="max-width:1280px;margin:0 auto;position:relative;z-index:1">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div>
+        <span style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:24px;color:#22d3ee;background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.2)">Research & Clinical Trials</span>
+        <h2 style="font-family:Sora,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:white;margin-bottom:20px">Revolutionizing clinical trial participation</h2>
+        <p style="color:#d1d5db;font-size:16px;line-height:1.8;margin-bottom:24px">Geographic barriers are the #1 reason trial participants drop out. myOnsite eliminates that — bringing study protocol specimen collection directly to participants, wherever they are.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;align-items:center;gap:12px;color:#d1d5db;font-size:14px"><span style="color:#22d3ee;font-size:16px">✓</span> FDA-compliant chain-of-custody specimen handling</li>
+          <li style="display:flex;align-items:center;gap:12px;color:#d1d5db;font-size:14px"><span style="color:#22d3ee;font-size:16px">✓</span> Improved participant retention through home visits</li>
+          <li style="display:flex;align-items:center;gap:12px;color:#d1d5db;font-size:14px"><span style="color:#22d3ee;font-size:16px">✓</span> Expanded geographic reach for recruitment</li>
+          <li style="display:flex;align-items:center;gap:12px;color:#d1d5db;font-size:14px"><span style="color:#22d3ee;font-size:16px">✓</span> Real-time scheduling and documentation integration</li>
+        </ul>
+        <a href="tel:9412710701" class="cta-glow" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);color:white;text-decoration:none;font-weight:600;font-size:14px">Talk to Our Research Team →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="glass" style="border-radius:20px;padding:28px;text-align:center"><p class="stat-number" style="font-family:Sora,sans-serif;font-size:40px;font-weight:800">72%</p><p style="color:#d1d5db;font-size:13px;margin-top:8px">Improved trial retention with mobile collection</p></div>
+        <div class="glass" style="border-radius:20px;padding:28px;text-align:center"><p class="stat-number" style="font-family:Sora,sans-serif;font-size:40px;font-weight:800">3×</p><p style="color:#d1d5db;font-size:13px;margin-top:8px">Larger participant pools with decentralized models</p></div>
+        <div class="glass" style="border-radius:20px;padding:28px;text-align:center"><p class="stat-number" style="font-family:Sora,sans-serif;font-size:40px;font-weight:800">100%</p><p style="color:#d1d5db;font-size:13px;margin-top:8px">Chain-of-custody documentation compliance</p></div>
+        <div class="glass" style="border-radius:20px;padding:28px;text-align:center"><p class="stat-number" style="font-family:Sora,sans-serif;font-size:40px;font-weight:800">24hr</p><p style="color:#d1d5db;font-size:13px;margin-top:8px">Specimen transport & lab processing SLA</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE AREAS -->
+<section id="coverage" style="padding:80px 24px;background:white">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="section-tag" style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px">Where We Serve</span>
+      <h2 style="font-family:Sora,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:#080f2e;margin-bottom:16px">Coast to coast coverage</h2>
+      <p style="color:#6b7280;font-size:17px;max-width:520px;margin:0 auto">Currently serving 7 states with rapid expansion underway. Click your state for local coverage details.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:16px;margin-bottom:24px">
+      <a href="mobile-phlebotomy-california.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s;cursor:pointer" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">🌴</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">California</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">CA</span>
+      </a>
+      <a href="mobile-phlebotomy-connecticut.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">🏛</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">Connecticut</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">CT</span>
+      </a>
+      <a href="mobile-phlebotomy-florida.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">☀️</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">Florida</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">FL</span>
+      </a>
+      <a href="mobile-phlebotomy-massachusetts.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">🦞</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">Massachusetts</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">MA</span>
+      </a>
+      <a href="mobile-phlebotomy-new-hampshire.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">⛰</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">New Hampshire</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">NH</span>
+      </a>
+      <a href="mobile-phlebotomy-new-jersey.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">🗽</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">New Jersey</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">NJ</span>
+      </a>
+      <a href="mobile-phlebotomy-new-york.html" style="display:flex;flex-direction:column;align-items:center;padding:20px 12px;border-radius:16px;border:2px solid #e5e7eb;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:28px;margin-bottom:10px">🍎</span><span style="font-family:Sora,sans-serif;font-weight:600;color:#080f2e;font-size:12px;text-align:center">New York</span><span style="color:#9ca3af;font-size:11px;margin-top:4px">NY</span>
+      </a>
+    </div>
+    <p style="text-align:center;color:#9ca3af;font-size:14px">Don't see your state? <a href="tel:9412710701" style="color:#1e40af;font-weight:600;text-decoration:none">Call us</a> — we may still be able to help.</p>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" style="padding:80px 24px;background:#f9fafb">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
+      <div>
+        <span class="section-tag" style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px">Healthcare Insights</span>
+        <h2 style="font-family:Sora,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:#080f2e">Trending in 2026 healthcare</h2>
+      </div>
+      <a href="blog.html" style="color:#1e40af;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap">View all articles →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <a href="blog/at-home-visits-clinical-trials.html" class="blog-card" style="background:white;border-radius:20px;overflow:hidden;border:1px solid #f3f4f6;text-decoration:none;display:block">
+        <div style="height:180px;background:linear-gradient(135deg,#dbeafe,#e0f2fe);display:flex;align-items:center;justify-content:center;font-size:64px">🔬</div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:#dbeafe;color:#1e40af">Clinical Trials</span>
+            <span style="color:#9ca3af;font-size:12px">5 min read</span>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:15px;color:#080f2e;margin-bottom:8px;line-height:1.4">How At-Home Visits Are Revolutionizing Clinical Trial Participation</h3>
+          <p style="color:#6b7280;font-size:13px;line-height:1.6">Not long ago, joining a clinical trial meant rearranging your entire life. Mobile phlebotomy is changing that forever.</p>
+        </div>
+      </a>
+      <a href="blog/ai-diagnostics-2026.html" class="blog-card" style="background:white;border-radius:20px;overflow:hidden;border:1px solid #f3f4f6;text-decoration:none;display:block">
+        <div style="height:180px;background:linear-gradient(135deg,#e0e7ff,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:64px">🤖</div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:#ede9fe;color:#7c3aed">Trending 🔥</span>
+            <span style="color:#9ca3af;font-size:12px">7 min read</span>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:15px;color:#080f2e;margin-bottom:8px;line-height:1.4">AI-Powered Diagnostics: What the $504B Healthcare AI Market Means for Your Lab Results</h3>
+          <p style="color:#6b7280;font-size:13px;line-height:1.6">The global AI in healthcare market is exploding. Here's what it means for how your blood work is analyzed in 2026.</p>
+        </div>
+      </a>
+      <a href="blog/seniors-at-home-blood-draw.html" class="blog-card" style="background:white;border-radius:20px;overflow:hidden;border:1px solid #f3f4f6;text-decoration:none;display:block">
+        <div style="height:180px;background:linear-gradient(135deg,#d1fae5,#ecfdf5);display:flex;align-items:center;justify-content:center;font-size:64px">👴</div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:#d1fae5;color:#065f46">Senior Health</span>
+            <span style="color:#9ca3af;font-size:12px">5 min read</span>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:15px;color:#080f2e;margin-bottom:8px;line-height:1.4">5 Reasons Seniors Are Choosing At-Home Blood Draws in 2026</h3>
+          <p style="color:#6b7280;font-size:13px;line-height:1.6">For older adults, clinic visits can be difficult or risky. Discover why home-based lab testing is becoming the standard of care.</p>
+        </div>
+      </a>
+      <a href="blog/insurance-coverage-guide.html" class="blog-card" style="background:white;border-radius:20px;overflow:hidden;border:1px solid #f3f4f6;text-decoration:none;display:block">
+        <div style="height:180px;background:linear-gradient(135deg,#fef3c7,#fffbeb);display:flex;align-items:center;justify-content:center;font-size:64px">🛡️</div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:#fef3c7;color:#92400e">Most Popular</span>
+            <span style="color:#9ca3af;font-size:12px">8 min read</span>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:15px;color:#080f2e;margin-bottom:8px;line-height:1.4">Does Insurance Cover Mobile Phlebotomy? Your 2026 Complete Guide</h3>
+          <p style="color:#6b7280;font-size:13px;line-height:1.6">Medicare, Medicaid, and most major insurers now cover home blood draws. Here's everything you need to know.</p>
+        </div>
+      </a>
+      <a href="blog/dehydration-blood-tests.html" class="blog-card" style="background:white;border-radius:20px;overflow:hidden;border:1px solid #f3f4f6;text-decoration:none;display:block">
+        <div style="height:180px;background:linear-gradient(135deg,#cffafe,#ecfeff);display:flex;align-items:center;justify-content:center;font-size:64px">💧</div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:#cffafe;color:#0e7490">Lab Science</span>
+            <span style="color:#9ca3af;font-size:12px">4 min read</span>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:15px;color:#080f2e;margin-bottom:8px;line-height:1.4">Which Blood Tests Indicate Dehydration?</h3>
+          <p style="color:#6b7280;font-size:13px;line-height:1.6">Ever heard "drink more water" after a blood test? Here's what your labs actually reveal about hydration status.</p>
+        </div>
+      </a>
+      <a href="blog/special-needs-phlebotomy.html" class="blog-card" style="background:white;border-radius:20px;overflow:hidden;border:1px solid #f3f4f6;text-decoration:none;display:block">
+        <div style="height:180px;background:linear-gradient(135deg,#fce7f3,#fdf2f8);display:flex;align-items:center;justify-content:center;font-size:64px">♿</div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:#fce7f3;color:#9d174d">Patient Care</span>
+            <span style="color:#9ca3af;font-size:12px">6 min read</span>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:15px;color:#080f2e;margin-bottom:8px;line-height:1.4">Mobile Phlebotomy for Special-Needs Patients: Care That Comes to You</h3>
+          <p style="color:#6b7280;font-size:13px;line-height:1.6">For patients with disabilities or mobility challenges, getting blood drawn can be an ordeal. We're changing that.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding:80px 24px;background:white">
+  <div style="max-width:800px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="section-tag" style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px">FAQ</span>
+      <h2 style="font-family:Sora,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:#080f2e">Common questions</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" id="faqList">
+      <div style="border:1px solid #e5e7eb;border-radius:16px;overflow:hidden">
+        <button onclick="toggleFaq(this)" style="width:100%;text-align:left;padding:20px 24px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Inter,sans-serif">
+          <span style="font-weight:500;color:#080f2e;font-size:15px">How does mobile phlebotomy work?</span><span class="faq-arrow" style="font-size:18px;color:#9ca3af;transition:transform 0.2s;flex-shrink:0">▾</span>
+        </button>
+        <div class="faq-body" style="display:none;padding:0 24px 20px;color:#6b7280;font-size:14px;line-height:1.7">A certified phlebotomist visits your home, office, or facility at a scheduled time to collect your blood sample. The sample is transported to a CLIA-certified lab for analysis, and results are shared with your physician within 24–48 hours.</div>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:16px;overflow:hidden">
+        <button onclick="toggleFaq(this)" style="width:100%;text-align:left;padding:20px 24px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Inter,sans-serif">
+          <span style="font-weight:500;color:#080f2e;font-size:15px">Is at-home blood draw covered by insurance?</span><span class="faq-arrow" style="font-size:18px;color:#9ca3af;transition:transform 0.2s;flex-shrink:0">▾</span>
+        </button>
+        <div class="faq-body" style="display:none;padding:0 24px 20px;color:#6b7280;font-size:14px;line-height:1.7">Many major insurance plans cover mobile phlebotomy, including Medicare and Medicaid under qualifying conditions. Contact us with your insurance details and we will verify your benefits before your appointment at no charge.</div>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:16px;overflow:hidden">
+        <button onclick="toggleFaq(this)" style="width:100%;text-align:left;padding:20px 24px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Inter,sans-serif">
+          <span style="font-weight:500;color:#080f2e;font-size:15px">How do I prepare for a home blood draw?</span><span class="faq-arrow" style="font-size:18px;color:#9ca3af;transition:transform 0.2s;flex-shrink:0">▾</span>
+        </button>
+        <div class="faq-body" style="display:none;padding:0 24px 20px;color:#6b7280;font-size:14px;line-height:1.7">For most tests, fast for 8–12 hours prior. Stay well-hydrated with water, avoid strenuous exercise, and wear loose-fitting clothing with easy arm access. Your phlebotomist will confirm specific preparation when you book.</div>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:16px;overflow:hidden">
+        <button onclick="toggleFaq(this)" style="width:100%;text-align:left;padding:20px 24px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Inter,sans-serif">
+          <span style="font-weight:500;color:#080f2e;font-size:15px">How quickly will I get my results?</span><span class="faq-arrow" style="font-size:18px;color:#9ca3af;transition:transform 0.2s;flex-shrink:0">▾</span>
+        </button>
+        <div class="faq-body" style="display:none;padding:0 24px 20px;color:#6b7280;font-size:14px;line-height:1.7">Most standard lab results are delivered to your physician within 24–48 hours of collection. Specialized tests may take 3–5 business days. Your doctor will then review and share results with you per their normal process.</div>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:16px;overflow:hidden">
+        <button onclick="toggleFaq(this)" style="width:100%;text-align:left;padding:20px 24px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Inter,sans-serif">
+          <span style="font-weight:500;color:#080f2e;font-size:15px">Which states do you serve?</span><span class="faq-arrow" style="font-size:18px;color:#9ca3af;transition:transform 0.2s;flex-shrink:0">▾</span>
+        </button>
+        <div class="faq-body" style="display:none;padding:0 24px 20px;color:#6b7280;font-size:14px;line-height:1.7">We currently serve California, Connecticut, Florida, Massachusetts, New Hampshire, New Jersey, and New York. We're actively expanding — call us to check availability in your area even if your state isn't listed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="book" style="padding:80px 24px;background:linear-gradient(135deg,#080f2e,#0f2156)">
+  <div style="max-width:720px;margin:0 auto;text-align:center">
+    <span style="display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:24px;color:#22d3ee;background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.2)">Ready to book?</span>
+    <h2 style="font-family:Sora,sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;color:white;margin-bottom:20px;line-height:1.1">Your lab test,<br/><span style="background:linear-gradient(135deg,#22d3ee,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">your schedule</span></h2>
+    <p style="color:#d1d5db;font-size:17px;margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto">Book a certified phlebotomist to come to you. We handle everything — from insurance verification to result delivery.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:24px">
+      <a href="tel:9412710701" class="cta-glow" style="display:inline-flex;align-items:center;gap:12px;padding:18px 36px;border-radius:14px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);color:white;text-decoration:none;font-size:17px;font-weight:700">📞 Call (941) 271-0701</a>
+      <a href="mailto:info@myonsitehealthcare.com" class="glass" style="display:inline-flex;align-items:center;gap:12px;padding:18px 32px;border-radius:14px;color:white;text-decoration:none;font-size:17px;font-weight:600">✉️ Email Us</a>
+    </div>
+    <p style="color:#6b7280;font-size:13px">Fax orders to: <span style="color:#d1d5db;font-weight:500">(877) 471-1327</span> or <span style="color:#d1d5db;font-weight:500">(949) 596-0903</span></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#030712;padding:64px 24px 32px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center;font-size:18px">🩸</div>
+          <span style="font-family:Sora,sans-serif;font-weight:700;color:white;font-size:17px">my<span style="color:#22d3ee">Onsite</span> Healthcare</span>
+        </div>
+        <p style="color:#6b7280;font-size:14px;line-height:1.7;max-width:280px;margin-bottom:20px">Bringing certified phlebotomy and mobile lab services directly to patients, providers, and researchers across 7 states.</p>
+        <p style="color:#9ca3af;font-size:13px;margin-bottom:6px">📞 <a href="tel:9412710701" style="color:#9ca3af;text-decoration:none">(941) 271-0701</a></p>
+        <p style="color:#9ca3af;font-size:13px">🖨️ Fax: (877) 471-1327</p>
+      </div>
+      <div>
+        <h4 style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="#services" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Mobile Phlebotomy</a>
+          <a href="#clinical-trials" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Clinical Trials</a>
+          <a href="#services" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Legal Services</a>
+          <a href="#services" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Corporate Wellness</a>
+          <a href="#services" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Event Services</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Coverage</h4>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="mobile-phlebotomy-california.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">California</a>
+          <a href="mobile-phlebotomy-florida.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Florida</a>
+          <a href="mobile-phlebotomy-new-york.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">New York</a>
+          <a href="mobile-phlebotomy-new-jersey.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">New Jersey</a>
+          <a href="mobile-phlebotomy-connecticut.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Connecticut</a>
+          <a href="mobile-phlebotomy-massachusetts.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Massachusetts</a>
+          <a href="mobile-phlebotomy-new-hampshire.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">New Hampshire</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="about.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">About Us</a>
+          <a href="blog.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Blog</a>
+          <a href="careers.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Careers</a>
+          <a href="research.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Research & Publications</a>
+          <a href="contact.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">Contact Us</a>
+          <a href="faq.html" style="color:#6b7280;font-size:13px;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #111827;padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <p style="color:#4b5563;font-size:12px">© 2026 myOnsite Healthcare. All rights reserved.</p>
+      <div style="display:flex;gap:24px;align-items:center">
+        <a href="privacy.html" style="color:#4b5563;font-size:12px;text-decoration:none">Privacy Policy</a>
+        <a href="terms.html" style="color:#4b5563;font-size:12px;text-decoration:none">Terms of Use</a>
+        <a href="hipaa.html" style="color:#4b5563;font-size:12px;text-decoration:none">HIPAA Notice</a>
+        <span style="color:#4ade80;font-size:12px;font-weight:500">🔒 HIPAA Compliant</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn){
+    const body=btn.nextElementSibling;
+    const arrow=btn.querySelector('.faq-arrow');
+    const open=body.style.display==='block';
+    document.querySelectorAll('.faq-body').forEach(b=>b.style.display='none');
+    document.querySelectorAll('.faq-arrow').forEach(a=>a.style.transform='rotate(0deg)');
+    if(!open){body.style.display='block';arrow.style.transform='rotate(180deg)';}
+  }
+  window.addEventListener('scroll',()=>{
+    const nav=document.getElementById('navbar');
+    const cta=document.getElementById('navCTA');
+    const ham=document.getElementById('hamburger');
+    if(window.innerWidth>768){cta.style.display='flex';}
+    else{ham.style.display='block';}
+  });
+  // Responsive nav init
+  if(window.innerWidth>768){document.getElementById('navCTA').style.display='flex';}
+  else{document.getElementById('hamburger').style.display='block';}
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>768){document.getElementById('navCTA').style.display='flex';document.getElementById('hamburger').style.display='none';}
+    else{document.getElementById('navCTA').style.display='none';document.getElementById('hamburger').style.display='block';}
+  });
+</script>
+</body>
+</html>
