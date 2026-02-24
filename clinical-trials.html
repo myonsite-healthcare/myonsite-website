@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Clinical Trials & Research Services | myOnsite Healthcare</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #1f2937; line-height: 1.6; }
+    a { color: #3b5fc0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    /* HEADER & NAV */
+    #navbar { background: linear-gradient(135deg, #0f1419, #1a202c); border-bottom: 1px solid #2d3748; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1400px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; color: white; font-weight: 700; font-size: 16px; }
+    .nav-logo span { color: #22d3ee; }
+    .nav-logo-icon { width: 28px; height: 28px; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-item { position: relative; }
+    .nav-link { background: none; border: none; color: #e5e7eb; font-size: 14px; cursor: pointer; font-weight: 500; }
+    .nav-link:hover { color: #22d3ee; }
+    .dropdown-menu { position: absolute; top: 100%; left: 0; background: #1a202c; border: 1px solid #2d3748; border-radius: 8px; padding: 12px; min-width: 200px; display: none; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .nav-item:hover .dropdown-menu { display: flex; flex-direction: column; gap: 8px; }
+    .dropdown-link { color: #9ca3af; font-size: 13px; padding: 8px 12px; border-radius: 4px; }
+    .dropdown-link:hover { background: #2d3748; color: #22d3ee; }
+    .nav-cta { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 13px; }
+    .hamburger { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+    .mobile-nav { display: none; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .mobile-nav { display: none; flex-direction: column; gap: 12px; padding: 16px; background: #1a202c; }
+      .mobile-nav.open { display: flex; }
+      .mobile-cta { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 12px 16px; border-radius: 6px; font-weight: 600; text-align: center; }
+    }
+    
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #0f1419 0%, #1a3a52 50%, #2d1b69 100%); color: white; padding: 80px 24px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(34,211,238,0.15) 0%, transparent 70%); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(59,95,192,0.15) 0%, transparent 70%); border-radius: 50%; }
+    .hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+    .hero-subtitle { font-size: 18px; color: #cbd5e1; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .hero-dna { width: 120px; height: 120px; margin: 0 auto 32px; }
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px; }
+      .hero h1 { font-size: 32px; }
+      .hero-subtitle { font-size: 16px; }
+    }
+    
+    /* SECTIONS */
+    .section { max-width: 1400px; margin: 0 auto; padding: 80px 24px; }
+    .section h2 { font-size: 36px; font-weight: 700; margin-bottom: 48px; text-align: center; color: #0f1419; }
+    
+    /* PROBLEM/SOLUTION */
+    .problem-solution { background: #f9fafb; }
+    .problem-solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .problem-card, .solution-card { background: white; padding: 40px; border-radius: 12px; border-left: 4px solid #ef4444; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .solution-card { border-left-color: #10b981; }
+    .problem-card h3, .solution-card h3 { font-size: 22px; margin-bottom: 16px; color: #1f2937; }
+    .problem-card ul, .solution-card ul { list-style: none; }
+    .problem-card li, .solution-card li { padding: 10px 0; padding-left: 28px; position: relative; }
+    .problem-card li::before { content: '✗'; position: absolute; left: 0; color: #ef4444; font-weight: bold; }
+    .solution-card li::before { content: '✓'; position: absolute; left: 0; color: #10b981; font-weight: bold; }
+    @media (max-width: 768px) {
+      .problem-solution-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* STATS */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 32px; }
+    .stat-card { background: linear-gradient(135deg, #22d3ee15, #3b5fc015); padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; }
+    .stat-card h4 { font-size: 28px; font-weight: 700; color: #3b5fc0; margin-bottom: 8px; }
+    .stat-card p { color: #6b7280; font-size: 14px; }
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    /* HOW IT WORKS */
+    .how-it-works { background: white; }
+    .how-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+    .how-step { background: linear-gradient(135deg, #f0f9ff, #f0fdf4); padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; position: relative; }
+    .how-step h4 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #1f2937; }
+    .how-step p { font-size: 13px; color: #6b7280; }
+    .how-step-num { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; border-radius: 50%; font-weight: 700; margin-bottom: 12px; }
+    .how-step::after { content: '→'; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); font-size: 24px; color: #cbd5e1; font-weight: bold; }
+    .how-step:last-child::after { display: none; }
+    @media (max-width: 768px) {
+      .how-grid { grid-template-columns: 1fr; }
+      .how-step::after { display: none; }
+    }
+    
+    /* SPECIMENS & THERAPEUTIC AREAS */
+    .specimens, .therapeutic-areas { background: #f9fafb; }
+    .specimens-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+    .specimen-badge { background: white; padding: 24px; border-radius: 10px; text-align: center; border: 1px solid #e5e7eb; }
+    .specimen-badge h4 { font-size: 15px; font-weight: 600; margin-top: 8px; color: #1f2937; }
+    .therapeutic-areas { background: white; }
+    .therapeutic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .therapeutic-card { background: linear-gradient(135deg, #fef3c7, #fecaca); padding: 32px; border-radius: 12px; text-align: center; }
+    .therapeutic-card h4 { font-size: 18px; font-weight: 700; color: #b45309; }
+    .therapeutic-card p { color: #92400e; font-size: 13px; margin-top: 8px; }
+    @media (max-width: 768px) {
+      .specimens-grid { grid-template-columns: repeat(2, 1fr); }
+      .therapeutic-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* COMPLIANCE */
+    .compliance-section { background: linear-gradient(135deg, #1f2937, #111827); color: white; }
+    .compliance-section h2 { color: white; }
+    .compliance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+    .compliance-card { background: rgba(255,255,255,0.05); padding: 32px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+    .compliance-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #22d3ee; }
+    .compliance-card ul { list-style: none; }
+    .compliance-card li { padding: 8px 0; padding-left: 24px; position: relative; font-size: 13px; }
+    .compliance-card li::before { content: '✓'; position: absolute; left: 0; color: #10b981; }
+    @media (max-width: 768px) {
+      .compliance-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* CASE STUDIES TEASER */
+    .case-studies { background: white; }
+    .case-study-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+    .case-study-card { background: #f9fafb; padding: 32px; border-radius: 12px; border: 1px solid #e5e7eb; }
+    .case-study-card h4 { font-size: 16px; font-weight: 700; color: #1f2937; margin-bottom: 16px; }
+    .case-stat { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
+    .case-stat-label { font-size: 13px; color: #6b7280; }
+    .case-stat-value { font-size: 14px; font-weight: 700; color: #3b5fc0; }
+    @media (max-width: 768px) {
+      .case-study-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* PARTNERSHIP FORM */
+    .partnership-form { background: linear-gradient(135deg, #22d3ee15, #3b5fc015); padding: 48px; border-radius: 12px; max-width: 600px; margin: 40px auto; border: 1px solid #e5e7eb; }
+    .partnership-form h3 { font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #1f2937; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #374151; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; font-size: 14px; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { background: linear-gradient(135deg, #22d3ee, #3b5fc0); color: white; padding: 12px 24px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; }
+    .form-submit:hover { opacity: 0.9; }
+    
+    /* FAQ */
+    .faq { background: #f9fafb; }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item { background: white; margin-bottom: 16px; border-radius: 8px; border: 1px solid #e5e7eb; overflow: hidden; }
+    .faq-question { padding: 20px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+    .faq-question:hover { background: #f3f4f6; }
+    .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease; }
+    .faq-item.open .faq-answer { padding: 20px; max-height: 500px; }
+    .faq-toggle { font-size: 18px; }
+    
+    /* FOOTER */
+    .footer { background: #0f1419; color: #e5e7eb; padding: 60px 24px 20px; margin-top: 80px; }
+    .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .footer-col h4 { color: white; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+    .footer-col a { color: #9ca3af; font-size: 13px; display: block; margin-bottom: 10px; }
+    .footer-col a:hover { color: #22d3ee; }
+    .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 24px; border-top: 1px solid #2d3748; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+    .footer-legal { display: flex; gap: 24px; }
+    .hipaa-badge { background: #10b981; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<header id="navbar"><div class="nav-inner"><a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div><span class="nav-logo-text">my<span>Onsite</span> Healthcare</span></a><nav class="nav-links"><div class="nav-item"><button class="nav-link">Services ▾</button><div class="dropdown-menu"><a href="index.html#services" class="dropdown-link">🏠 Home Blood Draw</a><a href="clinical-trials.html" class="dropdown-link">🔬 Clinical Trials</a><a href="index.html#services" class="dropdown-link">⚖️ Legal Services</a><a href="index.html#services" class="dropdown-link">🏢 Corporate Wellness</a></div></div><div class="nav-item"><button class="nav-link">Coverage ▾</button><div class="dropdown-menu"><a href="mobile-phlebotomy-california.html" class="dropdown-link">🌴 California</a><a href="mobile-phlebotomy-florida.html" class="dropdown-link">☀️ Florida</a><a href="mobile-phlebotomy-new-york.html" class="dropdown-link">🍎 New York</a><a href="mobile-phlebotomy-new-jersey.html" class="dropdown-link">🗽 New Jersey</a><a href="mobile-phlebotomy-connecticut.html" class="dropdown-link">🏛 Connecticut</a><a href="mobile-phlebotomy-massachusetts.html" class="dropdown-link">🦞 Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html" class="dropdown-link">⛰ New Hampshire</a></div></div><a href="blog.html" class="nav-link">Blog</a><a href="about.html" class="nav-link">About</a><a href="careers.html" class="nav-link">Careers</a></nav><a href="tel:9412710701" class="nav-cta">Book a Draw →</a><button class="hamburger" onclick="toggleMenu()">☰</button></div><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="index.html#services">Services</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="tel:9412710701" class="mobile-cta">📞 Book a Draw — (941) 271-0701</a></div></header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <svg class="hero-dna" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="20" r="8" fill="#22d3ee" opacity="0.8"/><circle cx="50" cy="80" r="8" fill="#3b5fc0" opacity="0.8"/><path d="M50 28 Q40 40 50 52 Q60 64 50 76" stroke="#22d3ee" stroke-width="3" fill="none"/><path d="M50 28 Q60 40 50 52 Q40 64 50 76" stroke="#3b5fc0" stroke-width="3" fill="none"/><circle cx="35" cy="40" r="5" fill="#fbbf24" opacity="0.6"/><circle cx="65" cy="40" r="5" fill="#fbbf24" opacity="0.6"/><circle cx="35" cy="60" r="5" fill="#fbbf24" opacity="0.6"/><circle cx="65" cy="60" r="5" fill="#fbbf24" opacity="0.6"/>
+    </svg>
+    <h1>Decentralized Clinical Trials & Research Services</h1>
+    <p class="hero-subtitle">Bringing your study protocol directly to participants. No clinic visits. No drop-outs. Just results.</p>
+  </div>
+</section>
+<!-- PROBLEM / SOLUTION -->
+<section class="section problem-solution">
+  <h2>Why Decentralized Trials?</h2>
+  <div class="problem-solution-grid">
+    <div class="problem-card">
+      <h3>Traditional Clinical Trials</h3>
+      <ul>
+        <li>Participants must travel to clinic sites</li>
+        <li>Limited geographic recruitment pool</li>
+        <li>High drop-out rates (40-70%)</li>
+        <li>Long enrollment timelines</li>
+        <li>Inconsistent data quality</li>
+        <li>Expensive infrastructure requirements</li>
+      </ul>
+    </div>
+    <div class="solution-card">
+      <h3>myOnsite Decentralized Approach</h3>
+      <ul>
+        <li>We come to the participant's home or workplace</li>
+        <li>Access patients across 7 states + rural areas</li>
+        <li>72% higher retention rates</li>
+        <li>3× larger participant pools in shorter timeframes</li>
+        <li>Standardized collection & chain-of-custody</li>
+        <li>Real-time data tracking & reporting</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h4>72%</h4>
+      <p>Retention Rate Improvement</p>
+    </div>
+    <div class="stat-card">
+      <h4>3×</h4>
+      <p>Larger Participant Pool</p>
+    </div>
+    <div class="stat-card">
+      <h4>100%</h4>
+      <p>Chain-of-Custody Compliance</p>
+    </div>
+    <div class="stat-card">
+      <h4>24hrs</h4>
+      <p>Results SLA</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS FOR SPONSORS/CROs -->
+<section class="section">
+  <h2>How It Works for Sponsors & CROs</h2>
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="how-step-num">1</div>
+      <h4>Partnership</h4>
+      <p>We align on your study protocol and recruitment strategy</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">2</div>
+      <h4>Protocol Review</h4>
+      <p>Detailed specimen & collection requirements documented</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">3</div>
+      <h4>Phlebotomist Training</h4>
+      <p>GCP-certified team trained on your specific trial</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">4</div>
+      <h4>Deployment</h4>
+      <p>Mobile collection scheduled & executed across regions</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">5</div>
+      <h4>Reporting</h4>
+      <p>Real-time dashboards & full audit trail documentation</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIMENS -->
+<section class="section problem-solution">
+  <h2>Specimen Types We Collect</h2>
+  <div class="specimens-grid">
+    <div class="specimen-badge">
+      <div style="font-size: 32px;">🩸</div>
+      <h4>Whole Blood</h4>
+    </div>
+    <div class="specimen-badge">
+      <div style="font-size: 32px;">🧪</div>
+      <h4>Plasma</h4>
+    </div>
+    <div class="specimen-badge">
+      <div style="font-size: 32px;">🧬</div>
+      <h4>Serum</h4>
+    </div>
+    <div class="specimen-badge">
+      <div style="font-size: 32px;">💧</div>
+      <h4>Urine</h4>
+    </div>
+    <div class="specimen-badge">
+      <div style="font-size: 32px;">👄</div>
+      <h4>Saliva</h4>
+    </div>
+  </div>
+</section>
+
+<!-- THERAPEUTIC AREAS -->
+<section class="section therapeutic-areas">
+  <h2>Therapeutic Areas of Expertise</h2>
+  <div class="therapeutic-grid">
+    <div class="therapeutic-card">
+      <h4>🧠 Neurology</h4>
+      <p>Dementia, Parkinson's, neuroinflamatory disorders</p>
+    </div>
+    <div class="therapeutic-card">
+      <h4>♥️ Cardiology</h4>
+      <p>Heart disease, arrhythmia, cardiovascular biomarkers</p>
+    </div>
+    <div class="therapeutic-card">
+      <h4>🎯 Oncology</h4>
+      <p>Cancer biomarkers, immunotherapy trials, genetic mutations</p>
+    </div>
+    <div class="therapeutic-card">
+      <h4>🩺 Diabetes</h4>
+      <p>Type 1 & 2 diabetes, metabolic disorders</p>
+    </div>
+    <div class="therapeutic-card">
+      <h4>🧬 Rare Diseases</h4>
+      <p>Genetic markers, ultra-rare patient populations</p>
+    </div>
+    <div class="therapeutic-card">
+      <h4>🔬 Other Specialties</h4>
+      <p>Infectious disease, immunology, GI, respiratory</p>
+    </div>
+  </div>
+</section>
+<!-- REGULATORY COMPLIANCE -->
+<section class="section compliance-section">
+  <h2>Regulatory Compliance & Standards</h2>
+  <div class="compliance-grid">
+    <div class="compliance-card">
+      <h4>FDA Guidance (2023)</h4>
+      <ul>
+        <li>FDA Decentralized Trial Guidance</li>
+        <li>Remote data capture support</li>
+        <li>Mobile collection best practices</li>
+        <li>Digital consent frameworks</li>
+      </ul>
+    </div>
+    <div class="compliance-card">
+      <h4>Clinical Quality Standards</h4>
+      <ul>
+        <li>GCP (Good Clinical Practice) certified</li>
+        <li>NAACLS Accreditation</li>
+        <li>CLIA-certified laboratories</li>
+        <li>CAP audited operations</li>
+      </ul>
+    </div>
+    <div class="compliance-card">
+      <h4>Data & Chain-of-Custody</h4>
+      <ul>
+        <li>Digital e-Manifest system</li>
+        <li>QR-code specimen tracking</li>
+        <li>Electronic audit trails</li>
+        <li>Full traceability documentation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY STACK -->
+<section class="section">
+  <h2>Our Technology Platform</h2>
+  <div class="compliance-grid">
+    <div class="compliance-card" style="background: linear-gradient(135deg, rgba(34,211,238,0.1), rgba(59,95,192,0.1)); border: 1px solid rgba(34,211,238,0.3); color: #1f2937;">
+      <h4 style="color: #3b5fc0;">e-Manifest System</h4>
+      <ul style="color: #4b5563;">
+        <li>Real-time specimen documentation</li>
+        <li>HIPAA-compliant cloud storage</li>
+        <li>Automated protocol compliance checks</li>
+      </ul>
+    </div>
+    <div class="compliance-card" style="background: linear-gradient(135deg, rgba(34,211,238,0.1), rgba(59,95,192,0.1)); border: 1px solid rgba(34,211,238,0.3); color: #1f2937;">
+      <h4 style="color: #3b5fc0;">Smart Scheduling</h4>
+      <ul style="color: #4b5563;">
+        <li>Real-time appointment availability</li>
+        <li>Geographic load balancing</li>
+        <li>Integration with participant CRM</li>
+      </ul>
+    </div>
+    <div class="compliance-card" style="background: linear-gradient(135deg, rgba(34,211,238,0.1), rgba(59,95,192,0.1)); border: 1px solid rgba(34,211,238,0.3); color: #1f2937;">
+      <h4 style="color: #3b5fc0;">Analytics Dashboard</h4>
+      <ul style="color: #4b5563;">
+        <li>Real-time trial metrics</li>
+        <li>Retention tracking</li>
+        <li>Custom reporting capabilities</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="section problem-solution">
+  <h2>Why Sponsors Choose myOnsite</h2>
+  <div class="problem-solution-grid">
+    <div class="problem-card" style="border-left: 4px solid #3b5fc0;">
+      <h3>For Sponsors & CROs</h3>
+      <ul>
+        <li>Faster enrollment (3× larger pools)</li>
+        <li>72% higher retention rates</li>
+        <li>Reduced trial duration</li>
+        <li>Cost per patient drops significantly</li>
+        <li>Better demographic diversity</li>
+        <li>Real-time protocol compliance tracking</li>
+      </ul>
+    </div>
+    <div class="solution-card" style="border-left: 4px solid #10b981;">
+      <h3>For Participants</h3>
+      <ul>
+        <li>Zero travel burden or time commitment</li>
+        <li>Collections at home or work</li>
+        <li>Flexible scheduling (early morning, evening, weekends)</li>
+        <li>Comfortable, private environment</li>
+        <li>No stress or medical anxiety</li>
+        <li>Contribution to medical research</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES TEASER -->
+<section class="section case-studies">
+  <h2>Case Study Results</h2>
+  <div class="case-study-grid">
+    <div class="case-study-card">
+      <h4>Phase II Cardiology Trial</h4>
+      <div class="case-stat">
+        <span class="case-stat-label">Enrollment Speed:</span>
+        <span class="case-stat-value">+45% faster</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Retention Rate:</span>
+        <span class="case-stat-value">94%</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Data Quality:</span>
+        <span class="case-stat-value">100% compliant</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Geographic Diversity:</span>
+        <span class="case-stat-value">6 states</span>
+      </div>
+    </div>
+    <div class="case-study-card">
+      <h4>Phase I Neurology Study</h4>
+      <div class="case-stat">
+        <span class="case-stat-label">Participant Pool:</span>
+        <span class="case-stat-value">3× larger</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Retention Rate:</span>
+        <span class="case-stat-value">91%</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Collection Compliance:</span>
+        <span class="case-stat-value">99.8%</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Cost Savings:</span>
+        <span class="case-stat-value">38% reduction</span>
+      </div>
+    </div>
+    <div class="case-study-card">
+      <h4>Rare Disease Biomarker Trial</h4>
+      <div class="case-stat">
+        <span class="case-stat-label">Ultra-Rare Patients:</span>
+        <span class="case-stat-value">42 enrolled</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Retention Rate:</span>
+        <span class="case-stat-value">100%</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Geographic Reach:</span>
+        <span class="case-stat-value">5 countries</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-label">Timeline:</span>
+        <span class="case-stat-value">7 months</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PARTNERSHIP INQUIRY FORM -->
+<section class="section">
+  <h2>Interested in a Partnership?</h2>
+  <div class="partnership-form">
+    <h3>Clinical Trial Partnership Inquiry</h3>
+    <form>
+      <div class="form-group">
+        <label>Organization Name *</label>
+        <input type="text" placeholder="CRO, Sponsor, or Research Institution" required>
+      </div>
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" required>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel">
+      </div>
+      <div class="form-group">
+        <label>Trial Therapeutic Area</label>
+        <select>
+          <option>Select one...</option>
+          <option>Oncology</option>
+          <option>Cardiology</option>
+          <option>Neurology</option>
+          <option>Diabetes</option>
+          <option>Rare Disease</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Estimated Participant Count</label>
+        <input type="text" placeholder="e.g., 50-100">
+      </div>
+      <div class="form-group">
+        <label>States Needed</label>
+        <input type="text" placeholder="CA, FL, NY, NJ, CT, MA, NH">
+      </div>
+      <div class="form-group">
+        <label>Project Timeline</label>
+        <input type="text" placeholder="e.g., Q2 2026 launch">
+      </div>
+      <div class="form-group">
+        <label>Brief Project Description *</label>
+        <textarea placeholder="Tell us about your clinical trial..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Submit Partnership Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How do you ensure participant compliance and retention in home-based collections?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">We employ multiple strategies: personalized scheduling to participant preferences, automated reminders, dedicated patient advocates, and real-time tracking of appointment completion. Our 72% higher retention rate reflects our commitment to participant satisfaction and study protocol adherence.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What regulatory approvals do you have for decentralized trials?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">We operate under FDA decentralized trial guidance (2023), maintain GCP certification, hold CLIA lab accreditation, CAP audits, and NAACLS standards compliance. All our phlebotomists are nationally certified, and we maintain 100% chain-of-custody compliance with full audit trails.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can you handle complex specimen requirements (plasma, serum, specialized tubes)?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">Absolutely. We collect whole blood, plasma, serum, urine, saliva, and specialized specimens. Our team receives protocol-specific training for each trial, and we maintain proper handling, temperature control, and documentation for all specimen types.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What's the typical turnaround time for results and reporting?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">We maintain a 24-hour SLA for specimen processing and results delivery. Our real-time e-Manifest system provides digital chain-of-custody documentation, and our analytics dashboard gives sponsors real-time visibility into trial metrics, retention, and protocol compliance.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How do you maintain data security and HIPAA compliance?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">All data is stored in HIPAA-compliant cloud infrastructure with end-to-end encryption. We maintain role-based access controls, audit logging, and regular security assessments. Our e-Manifest system is designed with privacy-by-design principles.</div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer"><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#22d3ee,#3b5fc0);display:flex;align-items:center;justify-content:center;font-size:16px">🩸</div><span style="font-family:Sora,sans-serif;font-weight:700;color:white;font-size:16px">my<span style="color:#22d3ee">Onsite</span> Healthcare</span></div><p style="color:#4b5563;font-size:14px;line-height:1.7;max-width:280px;margin-bottom:20px">Bringing certified phlebotomy and mobile lab services directly to patients across 7 states.</p><div><a href="tel:9412710701" style="display:flex;align-items:center;gap:8px;color:#6b7280;font-size:13px;margin-bottom:6px;text-decoration:none">📞 (941) 271-0701</a><p style="color:#6b7280;font-size:13px">🖨️ Fax: (877) 471-1327</p></div></div><div class="footer-col"><h4>Services</h4><a href="index.html#services">Mobile Phlebotomy</a><a href="clinical-trials.html">Clinical Trials</a><a href="index.html#services">Legal Services</a><a href="index.html#services">Corporate Wellness</a><a href="index.html#services">Event Services</a></div><div class="footer-col"><h4>Coverage</h4><a href="mobile-phlebotomy-california.html">California</a><a href="mobile-phlebotomy-florida.html">Florida</a><a href="mobile-phlebotomy-new-york.html">New York</a><a href="mobile-phlebotomy-new-jersey.html">New Jersey</a><a href="mobile-phlebotomy-connecticut.html">Connecticut</a><a href="mobile-phlebotomy-massachusetts.html">Massachusetts</a><a href="mobile-phlebotomy-new-hampshire.html">New Hampshire</a></div><div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="clinical-trials.html">Clinical Trials</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div></div><div class="footer-bottom"><p>© 2026 myOnsite Healthcare. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">HIPAA Notice</a><span class="hipaa-badge">🔒 HIPAA Compliant</span></div></div></footer><script src="assets/script.js"></script>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobileNav');
+  menu.classList.toggle('open');
+}
+
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-question').addEventListener('click', function() {
+    item.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
